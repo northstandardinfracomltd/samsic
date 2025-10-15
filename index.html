@@ -211,7 +211,7 @@ img{max-width:100%;display:block}
 <header class="header" role="banner">
   <div class="header-inner">
     <div class="brand">
-      <a href="/" aria-label="SAMSIC Emploi - Accueil"><img src="https://via.placeholder.com/160x42?text=Logo" alt="Logo SAMSIC Emploi Angers" /></a>
+      <a href="/" aria-label="SAMSIC Emploi - Accueil"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Samsic+Angers.jpg" alt="Logo SAMSIC Emploi Angers" /></a>
       <div class="leader">SAMSIC Emploi — Angers</div>
     </div>
     <div class="header-actions">
@@ -251,21 +251,21 @@ img{max-width:100%;display:block}
 
     <div class="localities-grid" style="margin-top:14px;">
       <!-- 3 grands encarts (remplace background-image url() par tes src) -->
-      <a class="card-large" href="/angers" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://via.placeholder.com/800x400?text=Angers');" aria-label="Offres Angers">
+      <a class="card-large" href="/angers" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Angers.png');" aria-label="Offres Angers">
         <div>
           <h3 style="margin:0;font-size:20px">Angers</h3>
           <p style="margin-top:6px;font-size:14px">Offres d'intérim à Angers — mécaniciens, caristes, commerce...</p>
         </div>
       </a>
 
-      <a class="card-large" href="/verrieres-en-anjou" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://via.placeholder.com/800x400?text=Verrieres+en+Anjou');" aria-label="Offres Verrieres en Anjou">
+      <a class="card-large" href="/verrieres-en-anjou" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Verrieres+Anjou.png');" aria-label="Offres Verrieres en Anjou">
         <div>
-          <h3 style="margin:0;font-size:20px">Verrieres en Anjou</h3>
+          <h3 style="margin:0;font-size:20px">Verrières-en-Anjou</h3>
           <p style="margin-top:6px;font-size:14px">Vos missions près de Verrières en Anjou.</p>
         </div>
       </a>
 
-      <a class="card-large" href="/beaucouze" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://via.placeholder.com/800x400?text=Beaucouz%C3%A9');" aria-label="Offres Beaucouzé">
+      <a class="card-large" href="/beaucouze" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Beaucouze%CC%81.png');" aria-label="Offres Beaucouzé">
         <div>
           <h3 style="margin:0;font-size:20px">Beaucouzé</h3>
           <p style="margin-top:6px;font-size:14px">Solutions intérim à Beaucouzé.</p>
@@ -336,7 +336,6 @@ img{max-width:100%;display:block}
       <p>Envoyez votre CV, complétez votre profil en quelques minutes et on s’occupe du reste.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="https://www.samsic-emploi.fr/inscription" target="_blank" rel="noopener">S'inscrire sur Samsic</a>
-        <a class="btn btn-ghost" href="#cv-upload">Envoyer mon CV</a>
       </div>
     </div>
   </section>
@@ -553,20 +552,64 @@ const jobs = [
 /* ---------- Utilities & DOM render ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* Rotate city in hero after 5s delay, then every 2s */
-(function rotateHero(){
-  const el = document.getElementById('rotating-city');
-  let idx = localities.indexOf("Angers");
-  if(idx < 0) idx = 0;
-  setTimeout(()=>{
-    setInterval(()=>{
-      idx = (idx + 1) % localities.length;
-      // animate text change
-      el.style.opacity = 0;
-      setTimeout(()=>{ el.textContent = localities[idx]; el.style.opacity=1; },120);
-    },2000);
-  },5000); // initial 5s
+/* Typing effect for #rotating-city
+   - Requires an element with id="rotating-city"
+   - If `localities` array exists globally, it will be used; sinon une liste minimale est fournie.
+*/
+(function(){
+  const target = document.getElementById('rotating-city');
+  if(!target) return;
+
+  // Use existing localities if present, otherwise fallback
+  const cities = (window.localities && Array.isArray(window.localities) && window.localities.length)
+    ? window.localities.slice()
+    : ["Angers","Verrieres en Anjou","Beaucouzé","Avrillé","Trélazé"];
+
+  // Ensure starting index corresponds to current text if possible
+  let current = Math.max(0, cities.indexOf(target.textContent.trim()));
+  if(current === -1) current = 0;
+
+  const TYPE_DELAY = 60;      // ms per character (typing speed)
+  const INTERVAL_BASE = 2000; // desired interval between starts (ms)
+  const INITIAL_WAIT = 5000;  // wait before starting rotations (ms)
+
+  // typing function returns a Promise resolved when typing finished
+  function typeText(el, text){
+    return new Promise(resolve => {
+      el.textContent = ''; // clear immediately (no deletion animation)
+      let i = 0;
+      function step(){
+        if(i >= text.length){ resolve(); return; }
+        el.textContent += text[i++];
+        setTimeout(step, TYPE_DELAY);
+      }
+      step();
+    });
+  }
+
+  // main rotator: waits INITIAL_WAIT, then loops
+  setTimeout(async () => {
+    while(true){
+      current = (current + 1) % cities.length;
+      const nextCity = cities[current];
+
+      const startTime = Date.now();
+      await typeText(target, nextCity); // type in the new city
+      const elapsed = Date.now() - startTime;
+
+      // wait remaining time so that ~INTERVAL_BASE ms elapse between starts
+      const toWait = Math.max(0, INTERVAL_BASE - elapsed);
+      await new Promise(r => setTimeout(r, toWait));
+    }
+  }, INITIAL_WAIT);
+
 })();
+
+
+
+
+
+
 
 /* Section 4 jobs listing + popups */
 const jobsGrid = document.getElementById('jobs-grid');
