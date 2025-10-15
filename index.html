@@ -86,7 +86,7 @@ body{
 
 /* Hero */
 .hero{
-      background: #038bd1;
+      background: #0499d3;
   display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:40px 20px;
 }
 @media (max-width:900px){
@@ -189,6 +189,30 @@ body{
 a{color:inherit}
 img{max-width:100%;display:block}
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+.postuler {
+    border-radius: 100px !important;
+}
+
+.postuler:hover {
+box-shadow: 0 0 0px 6px #008cd221 !important;
+}
+
+
+.contakt {
+    background: #25303c !important;
+    color: #ffffff !important;
+    border-radius: 100px !important;
+    border: none !important;
+    font-family: 'VinciSans' !important;
+    font-size: 15px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+}
+
+.contakt:hover {
+box-shadow: 0 0 0px 6px #25303c24 !important;
+}
 </style>
 </head>
 <body>
@@ -221,8 +245,8 @@ img{max-width:100%;display:block}
       <div class="leader"></div>
     </div>
     <div class="header-actions">
-      <a class="btn btn-primary" href="#postuler" id="btn-postuler">Postuler</a>
-      <button class="btn btn-secondary" id="btn-contact" aria-haspopup="dialog">Contact</button>
+      <a class="postuler btn btn-primary" href="#postuler" id="btn-postuler">Postuler</a>
+      <button class="contakt btn btn-secondary" id="btn-contact" aria-haspopup="dialog">Contact</button>
     </div>
   </div>
 </header>
