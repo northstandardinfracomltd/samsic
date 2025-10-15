@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Agence intérim à Angers — SAMSIC Emploi Angers</title>
+<meta name="description" content="SAMSIC Emploi Angers - Agence intérim à Angers : travail temporaire, recrutement CDI, formation. Postulez et trouvez un emploi près d'Angers." />
+<link rel="canonical" href="https://www.samsic-emploi.fr/angers" />
+<meta name="robots" content="index,follow" />
+<!-- Open Graph -->
+<meta property="og:title" content="SAMSIC Emploi Angers — Agence intérim à Angers" />
+<meta property="og:description" content="Agence intérim à Angers : travail temporaire, recrutement CDI, formation. Postulez en ligne ou contactez notre agence locale." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="theme-color" content="#333e47" />
+
+<!-- Fonts fournies -->
+<style>
+@font-face{
+  font-family: 'VinciSans';
+  src: url('https://civilpromaws.s3.eu-north-1.amazonaws.com/VinciSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'VinciSans';
+  src: url('https://civilpromaws.s3.eu-north-1.amazonaws.com/VinciSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'VinciSansExpanded';
+  src: url('https://civilpromaws.s3.eu-north-1.amazonaws.com/VinciSansExpanded-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+:root{
+  --primary:#333e47;
+  --accent:#028cd1;
+  --muted:#6b7680;
+  --bg:#fff;
+  --maxw:1200px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: VinciSans, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--primary);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
+}
+
+/* Layout container */
+.container{max-width:var(--maxw);margin:0 auto;padding:20px;}
+
+/* Header */
+.header{
+  position:sticky;top:0;z-index:999;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter: blur(4px);
+  border-bottom:1px solid #e6eaee;
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:42px;width:auto;display:block}
+.leader{font-family:VinciSansExpanded, VinciSans; font-weight:300; font-size:18px;color:var(--primary);letter-spacing:0.6px}
+.header-actions{display:flex;gap:10px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:8px;border:1px solid transparent;font-weight:700;
+  text-decoration:none;cursor:pointer;font-size:15px;
+}
+.btn-ghost{background:transparent;color:var(--primary);border-color:transparent}
+.btn-primary{background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 6px 18px rgba(2,140,209,0.12)}
+.btn-secondary{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:40px 20px;
+}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; padding:28px 12px}
+}
+.hero-left h1{
+  margin:0 0 12px 0;
+  font-family:VinciSansExpanded, VinciSans;
+  font-size:clamp(22px,4.2vw,42px);
+  color:var(--primary);
+  line-height:1.05;
+}
+.hero-left p{margin:0 0 18px;color:var(--muted);font-size:15px}
+.benefits{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}
+.benefit{display:flex;gap:10px;align-items:flex-start}
+.benefit strong{display:block;color:var(--primary)}
+.hero-right{display:flex;flex-direction:column;gap:10px;align-items:end}
+.hero-images{display:flex;gap:8px;flex-direction:row}
+.hero-images img{width:110px;height:70px;object-fit:cover;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+/* Section headers */
+.section{
+  padding:36px 20px;border-top:1px solid #f0f2f4;
+}
+.section h2{
+  margin:0 0 16px 0;font-size:20px;color:var(--primary);font-weight:700;
+}
+
+/* Section 1 - localities */
+.localities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){ .localities-grid{grid-template-columns:1fr} }
+.card-large{
+  position:relative;overflow:hidden;border-radius:12px;height:180px;color:#fff;display:flex;align-items:flex-end;padding:16px;
+  background-size:cover;background-position:center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.card-large a{color:#fff;text-decoration:none;font-weight:800}
+.tag-cloud{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.tag-cloud a{padding:8px 10px;background:#f6f8fa;border-radius:999px;color:var(--primary);text-decoration:none;font-size:14px;border:1px solid #eef3f6}
+
+/* Section 2 CV */
+.cv-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.cv-cta p{margin:0;color:var(--muted)}
+.cv-cta .cta-actions{display:flex;gap:10px}
+
+/* Section 3 Agences */
+.agency-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:1000px){.agency-grid{grid-template-columns:1fr}}
+.agency-card{border-radius:12px;border:1px solid #eef3f6;padding:16px;display:flex;gap:12px;align-items:center}
+.agency-card img{width:120px;height:80px;object-fit:cover;border-radius:8px}
+.agency-info h3{margin:0 0 6px 0}
+.agency-actions{display:flex;gap:8px;margin-top:8px}
+
+/* Section 4 Offres */
+.jobs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:1100px){.jobs-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.jobs-grid{grid-template-columns:1fr}}
+.job-card{border-radius:10px;border:1px solid #eef3f6;padding:12px;display:flex;flex-direction:column;gap:8px}
+.job-card h4{margin:0;font-size:16px}
+.job-actions{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Section 5 simulateur */
+.calc{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.calc input[type="text"]{padding:10px;border-radius:8px;border:1px solid #dfe7eb;width:160px}
+.calc .result{background:#f7fbff;padding:12px;border-radius:8px;border:1px solid #e8f3fb}
+
+/* Feature grids */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.features{grid-template-columns:1fr}}
+.feature{display:flex;gap:12px;align-items:center}
+.feature .icon{width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#eef6fb}
+
+/* Footer */
+.footer{padding:24px 20px;border-top:1px solid #f0f2f4;background:#fff;color:var(--muted)}
+.small{font-size:14px;color:var(--muted)}
+
+/* Modal common */
+.modal{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:2000;padding:20px;
+  visibility:hidden;opacity:0;transition:opacity .18s ease,visibility .18s ease;
+}
+.modal.open{visibility:visible;opacity:1}
+.modal-dialog{background:#fff;border-radius:10px;max-width:820px;width:100%;max-height:90vh;overflow:auto;padding:18px;border:1px solid #e9eef2}
+.modal-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.modal-close{background:transparent;border:0;font-size:20px;color:var(--muted);cursor:pointer}
+
+/* helpers */
+.kicker{font-size:13px;color:var(--accent);font-weight:700}
+.center{text-align:center}
+.link{color:var(--accent);text-decoration:underline}
+.footer-grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+
+/* small tweaks */
+a{color:inherit}
+img{max-width:100%;display:block}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<!-- JSON-LD LocalBusiness (SEO) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EmploymentAgency",
+  "name":"SAMSIC Emploi Angers",
+  "url":"https://www.samsic-emploi.fr/angers",
+  "logo":"https://example.org/logo.png",
+  "telephone":"02 41 05 05 95",
+  "address": {
+    "@type":"PostalAddress",
+    "streetAddress":"52 rue Elisabeth Lion",
+    "addressLocality":"Angers",
+    "postalCode":"49000",
+    "addressCountry":"FR"
+  },
+  "areaServed":["Angers","Verrieres en Anjou","Beaucouzé","Avrillé"],
+  "description":"Agence intérim à Angers - Travail temporaire, recrutement CDI, formations pour intérimaires. Postulez ou contactez notre agence locale."
+}
+</script>
+
+<header class="header" role="banner">
+  <div class="header-inner">
+    <div class="brand">
+      <a href="/" aria-label="SAMSIC Emploi - Accueil"><img src="https://via.placeholder.com/160x42?text=Logo" alt="Logo SAMSIC Emploi Angers" /></a>
+      <div class="leader">SAMSIC Emploi — Angers</div>
+    </div>
+    <div class="header-actions">
+      <a class="btn btn-primary" href="#postuler" id="btn-postuler">Postuler</a>
+      <button class="btn btn-secondary" id="btn-contact" aria-haspopup="dialog">Contact</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-left container">
+      <div class="kicker">Agence intérim & recrutement local</div>
+      <h1 id="hero-title">Agence <span class="kicker">intérim</span> à <span id="rotating-city">Angers</span></h1>
+      <p>Notre expertise : <strong>travail temporaire</strong>, <strong>recrutement CDI</strong>, <strong>formation</strong>. Intervention locale à Angers et alentours.</p>
+
+      <div class="benefits">
+        <div class="benefit"><div><strong>Travail temporaire :</strong></div><div> sourcing, formation, administration, contrat, paies, attestations, mutuelle</div></div>
+        <div class="benefit"><div><strong>Recrutement CDI :</strong></div><div>cabinet local, trouver le bon profil</div></div>
+        <div class="benefit"><div><strong>Formation à votre dimension :</strong></div><div>programmes intérimaires avec notre centre de formation</div></div>
+      </div>
+    </div>
+
+    <aside class="hero-right container" aria-hidden="false">
+      <div class="hero-images" role="img" aria-label="Trois images de l'agence">
+        <img src="https://via.placeholder.com/300x180?text=Agence+1" alt="Agence Samsic Angers - vitrine" loading="lazy"/>
+        <img src="https://via.placeholder.com/300x180?text=Equipe" alt="Equipe Samsic Angers" loading="lazy"/>
+        <img src="https://via.placeholder.com/300x180?text=Formation" alt="Centre de formation Samsic" loading="lazy"/>
+      </div>
+    </aside>
+  </section>
+
+  <!-- SECTION 1 Localités -->
+  <section class="section container" aria-labelledby="sect-localities">
+    <h2 id="sect-localities">Vous recherchez un emploi sur Angers ?</h2>
+    <p class="small">Trouvez des opportunités proches de chez vous — nous couvrons Angers et les communes alentours.</p>
+
+    <div class="localities-grid" style="margin-top:14px;">
+      <!-- 3 grands encarts (remplace background-image url() par tes src) -->
+      <a class="card-large" href="/angers" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://via.placeholder.com/800x400?text=Angers');" aria-label="Offres Angers">
+        <div>
+          <h3 style="margin:0;font-size:20px">Angers</h3>
+          <p style="margin-top:6px;font-size:14px">Offres d'intérim à Angers — mécaniciens, caristes, commerce...</p>
+        </div>
+      </a>
+
+      <a class="card-large" href="/verrieres-en-anjou" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://via.placeholder.com/800x400?text=Verrieres+en+Anjou');" aria-label="Offres Verrieres en Anjou">
+        <div>
+          <h3 style="margin:0;font-size:20px">Verrieres en Anjou</h3>
+          <p style="margin-top:6px;font-size:14px">Vos missions près de Verrières en Anjou.</p>
+        </div>
+      </a>
+
+      <a class="card-large" href="/beaucouze" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://via.placeholder.com/800x400?text=Beaucouz%C3%A9');" aria-label="Offres Beaucouzé">
+        <div>
+          <h3 style="margin:0;font-size:20px">Beaucouzé</h3>
+          <p style="margin-top:6px;font-size:14px">Solutions intérim à Beaucouzé.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Tag cloud -->
+    <div class="tag-cloud" aria-hidden="false" style="margin-top:16px;">
+      <!-- Liste des autres localités -->
+      <a href="/saint-serge">Saint Serge</a>
+      <a href="/angers-est">Angers Est</a>
+      <a href="/angers-ouest">Angers Ouest</a>
+      <a href="/angers-sud">Angers Sud</a>
+      <a href="/angers-nord">Angers Nord</a>
+      <a href="/angers-centre">Angers Centre</a>
+      <a href="/belle-beille">Belle Beille</a>
+      <a href="/lac-de-maine">Lac de Maine</a>
+      <a href="/la-baumette">La Baumette</a>
+      <a href="/fremur">Frémur</a>
+      <a href="/frermureau">Le Frémureau</a>
+      <a href="/la-baudrairie">La Baudrairie</a>
+      <a href="/roche-marotte">Roche Marotte</a>
+      <a href="/justices">Justices</a>
+      <a href="/cite-jeannine">Cité Jeannine</a>
+      <a href="/bel-oeil">Bel Œil</a>
+      <a href="/la-fayette">La Fayette</a>
+      <a href="/la-paperie">La Paperie</a>
+      <a href="/madeleine">Madeleine</a>
+      <a href="/saint-leonard">Saint Léonard</a>
+      <a href="/croix-banchais">Croix Banchais</a>
+      <a href="/monplaisir">Monplaisir</a>
+      <a href="/les-claveries">Les Claveries</a>
+      <a href="/saint-aubin">Saint Aubin</a>
+      <a href="/avrille">Avrillé</a>
+      <a href="/montreuil-juigne">Montreuil Juigné</a>
+      <a href="/ecouflant">Écouflant</a>
+      <a href="/trelaze">Trélazé</a>
+      <a href="/les-ponts-de-ce">Les Ponts de Cé</a>
+      <a href="/sainte-gemmes-sur-loire">Sainte Gemmes sur Loire</a>
+      <a href="/bouchemaine">Bouchemaine</a>
+      <a href="/murs-erigne">Mûrs Erigné</a>
+      <a href="/saint-barthelemy-anjou">Saint Barthélemy Anjou</a>
+      <a href="/longuenee-en-anjou">Longuenée en Anjou</a>
+      <a href="/villeveque">Villeveque</a>
+      <a href="/briollay">Briollay</a>
+      <a href="/saint-clement-de-la-place">Saint Clément de la Place</a>
+      <a href="/le-plessis-grammoire">Le Plessis Grammoire</a>
+      <a href="/andard">Andard</a>
+      <a href="/corne">Corné</a>
+      <a href="/loire-authion">Loire Authion</a>
+      <a href="/becon-les-granits">Bécon les Granits</a>
+      <a href="/saint-lambert-la-potherie">Saint Lambert la Potherie</a>
+      <a href="/saint-martin-du-fouilloux">Saint Martin du Fouilloux</a>
+      <a href="/denee">Denée</a>
+      <a href="/moze-sur-louet">Mozé sur Louet</a>
+      <a href="/brissac">Brissac</a>
+      <a href="/la-possoniere">La Possonière</a>
+      <a href="/savennieres">Savennières</a>
+      <a href="/chalonnes-sur-loire">Chalonnes sur Loire</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2 : CVthèque -->
+  <section class="section container" aria-labelledby="sect-cv">
+    <h2 id="sect-cv">Envoyer mon CV</h2>
+    <div class="cv-cta">
+      <p>Envoyez votre CV, complétez votre profil en quelques minutes et on s’occupe du reste.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="https://www.samsic-emploi.fr/inscription" target="_blank" rel="noopener">S'inscrire sur Samsic</a>
+        <a class="btn btn-ghost" href="#cv-upload">Envoyer mon CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 : Agences -->
+  <section class="section container" aria-labelledby="sect-agences">
+    <h2 id="sect-agences">Rencontrez vos interlocuteurs locaux à Angers</h2>
+    <div class="agency-grid">
+      <!-- Agency 1 -->
+      <div class="agency-card">
+        <img src="https://via.placeholder.com/300x200?text=Agence+Angers" alt="Agence Angers - 52 rue Elisabeth Lion" loading="lazy" />
+        <div class="agency-info">
+          <h3>Angers - 52 rue Elisabeth Lion</h3>
+          <p class="small">Agence générale — Recrutement & intérim. Horaires : Lun-Ven 8h30-12h / 13h30-17h30</p>
+          <div class="agency-actions">
+            <a class="btn btn-secondary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
+            <button class="btn btn-primary open-contact" data-agency="Angers - 52 rue Elisabeth Lion">Envoyer un message</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agency 2 -->
+      <div class="agency-card">
+        <img src="https://via.placeholder.com/300x200?text=Angers+BTP" alt="Agence Angers BTP - Place Terra Botanica" loading="lazy" />
+        <div class="agency-info">
+          <h3>Angers BTP — Place Terra Botanica</h3>
+          <p class="small">Spécialité : BTP — Horaires : Lun-Ven 8h-12h / 13h-17h</p>
+          <div class="agency-actions">
+            <a class="btn btn-secondary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-ghost" href="tel:+33241093420">Appeler</a>
+            <button class="btn btn-primary open-contact" data-agency="Angers BTP - Place Terra Botanica">Envoyer un message</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agency 3 -->
+      <div class="agency-card">
+        <img src="https://via.placeholder.com/300x200?text=Cabinet+de+recrutement" alt="Cabinet de recrutement - 52 rue Elisabeth Lion" loading="lazy" />
+        <div class="agency-info">
+          <h3>Cabinet de recrutement</h3>
+          <p class="small">Cabinet local pour recrutements CDI — Horaires : sur RDV</p>
+          <div class="agency-actions">
+            <a class="btn btn-secondary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
+            <button class="btn btn-primary open-contact" data-agency="Cabinet de recrutement - Angers">Envoyer un message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 : Offres d'emplois & fiches métiers -->
+  <section class="section container" aria-labelledby="sect-offres">
+    <h2 id="sect-offres">Nos offres d'emplois et métiers à <span id="jobs-city">Angers</span></h2>
+    <p class="small">Consultez nos offres et découvrez les fiches métiers détaillées.</p>
+
+    <div class="jobs-grid" id="jobs-grid" style="margin-top:12px;">
+      <!-- Liste dynamique des 16 offres -->
+    </div>
+  </section>
+
+  <!-- SECTION 5 : Simulateur coût intérimaire -->
+  <section class="section container" aria-labelledby="sect-simulateur">
+    <h2 id="sect-simulateur">Samsic pour les entreprises — Estimation coût intérimaire</h2>
+    <p class="small kicker">Utilisez notre outil d’estimation du coût d’un intérimaire.</p>
+    <div style="margin-top:10px;padding:14px;border-radius:10px;border:1px solid #eef3f6;">
+      <div class="small" style="margin-bottom:8px;color:#8aa9bd">
+        <strong>Note :</strong> Notre outil est expérimental et estimatif, il vous aide à estimer le coût mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
+      </div>
+      <div class="calc">
+        <label class="small">Combien souhaitez-vous rémunérer votre intérimaire (€/h) :</label>
+        <input id="rate-input" type="text" placeholder="11,98" aria-label="taux horaire" />
+        <div class="result" aria-live="polite" id="calc-result" style="min-width:220px">
+          <div>Coût horaire à payer : <strong id="hourly-cost">-</strong> €</div>
+          <div>Coût mensuel (35h / semaine => 151.67h) : <strong id="monthly-cost">-</strong> €</div>
+        </div>
+        <div style="margin-left:auto">
+          <button class="btn btn-primary" id="btn-rdv">Prenez-rendez / être rappelé</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 Pourquoi travailler avec nous -->
+  <section class="section container" aria-labelledby="sect-why">
+    <h2 id="sect-why">Pourquoi travailler avec nous</h2>
+    <div class="features" style="margin-top:12px;">
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=I" alt="" /></div><div>Expertise multi-sectoriel</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=F" alt="" /></div><div>Flexibilité</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=C" alt="" /></div><div>Conseil personnalisé</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=S" alt="" /></div><div>Solutions personnalisées</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=D" alt="" /></div><div>Parcours dématérialisé</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=P" alt="" /></div><div>Accompagnement de proximité</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=A" alt="" /></div><div>Agilité — nous nous adaptons</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=R" alt="" /></div><div>Réactivité</div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 Secteurs -->
+  <section class="section container" aria-labelledby="sect-secteurs">
+    <h2 id="sect-secteurs">Secteurs</h2>
+    <div class="features" style="margin-top:12px;">
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=L" alt="" /></div><div>Logistique</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=B" alt="" /></div><div>BTP</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=H" alt="" /></div><div>Horticulture</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=P" alt="" /></div><div>Propreté</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=A" alt="" /></div><div>Agroalimentaire</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=C" alt="" /></div><div>Commerce</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=I" alt="" /></div><div>Industrie</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=Ag" alt="" /></div><div>Agriculture</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=T" alt="" /></div><div>Tertiaire</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=S" alt="" /></div><div>Services</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=M" alt="" /></div><div>Médical</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=R" alt="" /></div><div>Restauration</div></div>
+      <div class="feature"><div class="icon"><img src="https://via.placeholder.com/32?text=T" alt="" /></div><div>Télécom</div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 Histoire -->
+  <section class="section container" aria-labelledby="sect-histoire">
+    <h2 id="sect-histoire">L'histoire Samsic</h2>
+    <p>
+      C’est en 1986 que Christian Roulleau, breton autodidacte crée SAMSIC, une entreprise de propreté basée à Rennes. Aujourd’hui, le Groupe Samsic couvre plus de 150 lignes de services avec une présence dans 27 pays.
+      En 2019, Christian Roulleau transmet les rênes de son groupe familial à Thierry Geffroy afin de poursuivre son développement. Samsic est présent dans 27 pays, c’est un groupe de 136 000 collaborateurs pour 30 000 clients.
+    </p>
+  </section>
+
+  <!-- SECTION 9 Environnement -->
+  <section class="section container" aria-labelledby="sect-envir">
+    <h2 id="sect-envir">Protéger l'environnement ensemble</h2>
+    <p>Dans le cadre de son programme de développement durable, Samsic PLANET 2030 lancé en 2020, Samsic s’est fixé des engagements concrets, organisés autour de quatre piliers : la préservation de notre environnement, la diversité et la culture de nos talents, le développement des services coresponsables et la contribution à une société solidaire et durable.</p>
+    <img src="https://via.placeholder.com/1200x400?text=Planet+2030" alt="Samsic Planet 2030" loading="lazy" style="margin-top:12px;border-radius:8px" />
+  </section>
+
+  <!-- SECTION 10 RS1 & QHSE -->
+  <section class="section container" aria-labelledby="sect-qhse">
+    <h2 id="sect-qhse">Engagement RS1 et politique QHSE</h2>
+    <p>Objectif : offrir le même niveau de qualité de service à chacun de ses clients dans une démarche d’amélioration continue. Certifications : ISO 9001, ISO 14001, ISO 45001, CEFRI (selon agences). Médaille d'argent Ecovadis 2024.</p>
+    <img src="https://via.placeholder.com/1200x400?text=QHSE" alt="Certifications Samsic" loading="lazy" style="margin-top:12px;border-radius:8px" />
+  </section>
+
+  <!-- SECTION 11 Processus humain -->
+  <section class="section container" aria-labelledby="sect-processus">
+    <h2 id="sect-processus">Notre processus est humain</h2>
+    <ol style="margin-top:12px">
+      <li>Entretiens : systématiques de nos intérimaires en agence et visites des sites clients.</li>
+      <li>Rappels : horaires, remise du livret d’accueil et EPI, visites médicales et contrôle des documents.</li>
+      <li>Tests : sécurité, gestes/postures, mise en situation, AssessFirst.</li>
+      <li>Suivi et dématérialisation : contrats, relevés d’heures, bulletins, factures.</li>
+      <li>Accompagnement et évaluations : enquêtes et bilans de fin de mission.</li>
+    </ol>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SAMSIC Emploi Angers</strong>
+      <div class="small">52 rue Elisabeth Lion — 49000 Angers — Tél : 02 41 05 05 95</div>
+    </div>
+    <div class="small">© <span id="year"></span> SAMSIC Emploi — Tous droits réservés</div>
+  </div>
+</footer>
+
+<!-- Modals: Contact form (reusable) -->
+<div class="modal" id="modal-contact" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="contact-title">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h3 id="contact-title">Contact — Envoyer un message</h3>
+      <button class="modal-close" data-close>&times;</button>
+    </div>
+    <form id="contact-form" style="margin-top:8px;">
+      <input type="hidden" name="agency" id="contact-agency" value="" />
+      <label class="small">Nom</label>
+      <input name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
+      <label class="small">Email</label>
+      <input name="email" type="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
+      <label class="small">Téléphone</label>
+      <input name="phone" type="tel" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
+      <label class="small">Message</label>
+      <textarea name="message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px"></textarea>
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button type="button" class="btn btn-ghost" data-close>Annuler</button>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Dynamic job modals (16) -->
+<!-- We'll inject them via JS to avoid repeating 16x markup here (keeps HTML tidy) -->
+
+<script>
+/* ---------- Data ---------- */
+const localities = [
+  "Angers","Verrieres en Anjou","Beaucouzé","Saint Serge","Angers Est","Angers Ouest","Angers Sud","Angers Nord","Angers Centre",
+  "Belle Beille","Lac de Maine","La Baumette","Frémur","Le Frémureau","La Baudrairie","Roche Marotte","Justices","Cité Jeannine",
+  "Bel Œil","La Fayette","La Paperie","Madeleine","Saint Léonard","Croix Banchais","Monplaisir","Les Claveries","Saint Aubin",
+  "Avrillé","Montreuil Juigné","Écouflant","Trélazé","Les Ponts de Cé","Sainte Gemmes sur Loire","Bouchemaine","Mûrs Erigné",
+  "Saint Barthélemy Anjou","Longuenée en Anjou","Villeveque","Briollay","Saint Clément de la Place","Le Plessis Grammoire","Andard",
+  "Corné","Loire Authion","Bécon les Granits","Saint Lambert la Potherie","Saint Martin du Fouilloux","Denée","Mozé sur Louet",
+  "Brissac","La Possonière","Savennières","Chalonnes sur Loire"
+];
+
+const jobs = [
+  "Préparateur commande","Cariste","Vendeur","Chauffeur VL","Chauffeur PL","Chauffeur SPL","Mécanicien",
+  "Porteur Funéraire","Technicien de maintenance","Chargé d’affaires Électricité","Électricien CVC","Carrossier Peintre",
+  "Employé grande distribution","Agent de quai","Enquêteur Satisfaction","Conditionneur sur ligne de production"
+];
+
+/* ---------- Utilities & DOM render ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Rotate city in hero after 5s delay, then every 2s */
+(function rotateHero(){
+  const el = document.getElementById('rotating-city');
+  let idx = localities.indexOf("Angers");
+  if(idx < 0) idx = 0;
+  setTimeout(()=>{
+    setInterval(()=>{
+      idx = (idx + 1) % localities.length;
+      // animate text change
+      el.style.opacity = 0;
+      setTimeout(()=>{ el.textContent = localities[idx]; el.style.opacity=1; },120);
+    },2000);
+  },5000); // initial 5s
+})();
+
+/* Section 4 jobs listing + popups */
+const jobsGrid = document.getElementById('jobs-grid');
+
+jobs.forEach((job, i)=>{
+  const div = document.createElement('div');
+  div.className = 'job-card';
+  div.innerHTML = `
+    <h4>${job}</h4>
+    <p class="small" style="color:var(--muted)">Description courte pour ${job} — missions, compétences requises et conditions.</p>
+    <div class="job-actions">
+      <a class="btn btn-primary" href="#postuler" aria-label="Postuler ${job}">Postuler</a>
+      <button class="btn btn-ghost" data-job-index="${i}" aria-haspopup="dialog">Fiche Métier</button>
+    </div>
+  `;
+  jobsGrid.appendChild(div);
+});
+
+/* Create 16 job modals dynamically */
+function createJobModal(index, title){
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  modal.id = `modal-job-${index}`;
+  modal.setAttribute('role','dialog');
+  modal.setAttribute('aria-hidden','true');
+  modal.innerHTML = `
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>${title} — Fiche métier</h3>
+        <button class="modal-close" data-close>&times;</button>
+      </div>
+      <div style="margin-top:10px">
+        <p><strong>Présentation :</strong> Description complète du métier ${title}, tâches, conditions, évolution.</p>
+        <p><strong>Compétences :</strong> liste des compétences et certifications possibles.</p>
+        <p><strong>Perspectives :</strong> possibilités d'emploi, formation et évolutions.</p>
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px">
+          <button class="btn btn-ghost" data-close>Fermer</button>
+          <a class="btn btn-primary" href="#postuler">Postuler</a>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+jobs.forEach((j, idx)=> createJobModal(idx,j));
+
+/* Change section title city every 2s (starts immediately) */
+(function rotateJobsTitle(){
+  const el = document.getElementById('jobs-city');
+  let idx = 0;
+  setInterval(()=>{
+    el.style.opacity = 0;
+    setTimeout(()=>{ el.textContent = localities[idx % localities.length]; el.style.opacity = 1; },120);
+    idx++;
+  },2000);
+})();
+
+/* --------- Modal open/close logic (contact + job modals) --------- */
+function openModal(modal){
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(modal){
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+
+/* Contact modal triggers */
+const contactModal = document.getElementById('modal-contact');
+document.getElementById('btn-contact').addEventListener('click', ()=> {
+  document.getElementById('contact-agency').value = '';
+  openModal(contactModal);
+});
+
+document.getElementById('btn-rdv').addEventListener('click', ()=> {
+  document.getElementById('contact-agency').value = 'Demande de RDV - simulateur';
+  openModal(contactModal);
+});
+
+/* Agency contact buttons */
+document.querySelectorAll('.open-contact').forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    const a = btn.getAttribute('data-agency') || '';
+    document.getElementById('contact-agency').value = a;
+    openModal(contactModal);
+  });
+});
+
+/* Close modal when clicking close btns */
+document.querySelectorAll('[data-close]').forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    const modal = btn.closest('.modal');
+    if(modal) closeModal(modal);
+  });
+});
+
+/* Close click outside dialog */
+document.querySelectorAll('.modal').forEach(m=>{
+  m.addEventListener('click', (e)=>{
+    if(e.target === m) closeModal(m);
+  });
+});
+
+/* Job fiche openers */
+document.querySelectorAll('[data-job-index]').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const idx = btn.getAttribute('data-job-index');
+    const modal = document.getElementById('modal-job-' + idx);
+    if(modal) openModal(modal);
+  });
+});
+
+/* Contact form submission (placeholder) */
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  // ici : tu peux ajouter un fetch / integration Google Sheet / Zapier
+  alert('Merci ! Votre message a été pris en compte. (Formulaire de contact simulé)');
+  closeModal(contactModal);
+  this.reset();
+});
+
+/* Job modal close buttons event delegation (already handled) */
+
+/* ---------- Calculator logic (section 5) ---------- */
+const rateInput = document.getElementById('rate-input');
+const hourlyEl = document.getElementById('hourly-cost');
+const monthlyEl = document.getElementById('monthly-cost');
+
+/*
+Interpretation: multiplication coefficient = 1.95 (x1.95).
+Si tu veux appliquer 1.95% (x0.0195), remplace multiplier par 0.0195.
+*/
+const MULTIPLIER = 1.95;
+const MONTH_HOURS = 151.67;
+
+function parseAmount(val){
+  if(!val) return NaN;
+  // accept "11,98" and "11.98"
+  val = String(val).trim().replace(/\s/g,'').replace(',', '.').replace(/[€]/g,'');
+  const n = parseFloat(val);
+  return isNaN(n) ? NaN : n;
+}
+
+function compute(){
+  const inputVal = parseAmount(rateInput.value || rateInput.placeholder || '11.98');
+  if(isNaN(inputVal)){ hourlyEl.textContent='-'; monthlyEl.textContent='-'; return; }
+  const hourly = (inputVal * MULTIPLIER);
+  const monthly = +(hourly * MONTH_HOURS);
+  hourlyEl.textContent = hourly.toFixed(2).replace('.',',');
+  monthlyEl.textContent = monthly.toFixed(2).replace('.',',');
+}
+rateInput.addEventListener('input', compute);
+compute(); // initial
+
+/* Postuler button scroll */
+document.getElementById('btn-postuler').addEventListener('click', function(e){
+  // possibly scroll to job list
+  e.preventDefault();
+  document.getElementById('jobs-grid').scrollIntoView({behavior:'smooth'});
+});
+
+/* Basic keyboard accessibility: close ESC to close modals */
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.modal.open').forEach(m=>closeModal(m));
+  }
+});
+
+/* Small performance: lazy init images could be added; here images already use loading="lazy" */
+
+/* End of script */
+</script>
+</body>
+</html>
