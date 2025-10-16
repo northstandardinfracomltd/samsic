@@ -103,7 +103,7 @@ body{
 /* Hero */
 .hero{
       background: #0499d3;
-  display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:40px 20px;
+  display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:40px 20px;
 }
 @media (max-width:900px){
   .hero{grid-template-columns:1fr; padding:28px 12px}
@@ -286,13 +286,19 @@ max-width: 70% !important;
 
 /* Conteneur flexible */
 .gridpic {
-  display: flex;
-  max-width: 970px;
-  width: 100%;
-  gap: 15px;                /* espace entre les images sur grand écran */
-  align-items: stretch;     /* aligne les images par hauteur */
-  justify-content: center;
-  flex-wrap: nowrap;
+display: flex;
+    max-width: 970px;
+    width: 100%;
+    gap: 15px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border: 1px solid #e3e3e3;
+    padding: 12px 21px;
+        margin-bottom: 80px;
+    margin-top: 20px;
+        margin-left: auto;
+    margin-right: auto;
 }
 
 /* Images : s'adaptent au conteneur */
@@ -461,9 +467,14 @@ max-width: 70% !important;
     </div>
   </section>
 
+
+      <div class="gridpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+Interim+Angers.png" alt="Description de l'image 1" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Angers+Interim+Agence.png" alt="Description de l'image 2" class="elpic">
+</div>
+
   <!-- SECTION 3 : Agences -->
   <section class="section container" aria-labelledby="sect-agences">
-        <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+Interim+Angers.png" alt="Samsic Planet 2030" loading="lazy" style="margin-top:12px;border-radius:8px" />
     <h2 id="sect-agences">Rencontrez vos interlocuteurs locaux à Angers</h2>
     <div class="agency-grid">
       <!-- Agency 1 -->
@@ -569,6 +580,13 @@ max-width: 70% !important;
       <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone20.svg" alt="" /></div><div>Restauration</div></div>
     </div>
   </section>
+
+
+        <div class="gridpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Interim+Angers.png" alt="Description de l'image 1" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Angers+Interim.png" alt="Description de l'image 2" class="elpic">
+</div>
+
 
   <!-- SECTION 8 Histoire -->
   <section class="section container" aria-labelledby="sect-histoire">
