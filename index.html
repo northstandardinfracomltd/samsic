@@ -84,11 +84,20 @@ body{
 .leader{font-family:VinciSansExpanded, VinciSans; font-weight:300; font-size:18px;color:var(--primary);letter-spacing:0.6px}
 .header-actions{display:flex;gap:10px;align-items:center}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;padding:8px 15px;border-radius:8px;border:1px solid transparent;font-weight:700;
+  display:inline-flex;align-items:center;justify-content:center;padding:8px 15px;border-radius:10px;border:1px solid transparent;font-weight:700;
   text-decoration:none;cursor:pointer;font-size:15px;
 }
-.btn-ghost{background:transparent;color:var(--primary);border-color:transparent}
-.btn-primary{background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 6px 18px rgba(2,140,209,0.12)}
+.btn-ghost{
+      background: #effaff;
+    color: #008cd2;
+    border-color: transparent;
+    border: 1px solid #c7eafb;
+    font-family: 'VinciSans';
+    font-size: 15px;
+    padding: 10px 13px;
+        border-radius: 10px;
+}
+.btn-primary{    border-radius: 10px; background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 6px 18px rgba(2,140,209,0.12)}
 .btn-secondary{background:#fff;color:var(--accent);border:1px solid var(--accent)}
 
 /* Hero */
@@ -243,13 +252,36 @@ text-decoration: none !important;
 }
 
 .cvcon {
-background: #25303c !important;
+    background: #25303c !important;
+    margin: 12px;
+    margin: auto;
+    width: 98%;
+    border-radius: 12px;
+    padding: 25px;
+        max-width: 970px;
+}
+.caculmind  {
+      text-align: center !important;
+    background: #25303c !important;
+    margin: 12px;
+    margin: auto;
+    width: 98%;
+    border-radius: 12px;
+    padding: 25px;
+        max-width: 970px;
 }
 .samsic1 {
 color: #fff !important;
 }
 .samsic2 {
 color: #fff !important;
+}
+
+.bousy {
+max-width: 70% !important;
+}
+.feature:hover {
+  transform: scale(1.08);
 }
 </style>
 </head>
@@ -418,7 +450,7 @@ color: #fff !important;
           <h3>Angers - 52 rue Elisabeth Lion</h3>
           <p class="small">Agence générale — Recrutement & intérim. Horaires : Lun-Ven 8h30-12h / 13h30-17h30</p>
           <div class="agency-actions">
-            <a class="btn btn-secondary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-primary" href="#" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
                     </div>
         </div>
@@ -430,7 +462,7 @@ color: #fff !important;
           <h3>Angers BTP — Place Terra Botanica</h3>
           <p class="small">Spécialité : BTP — Horaires : Lun-Ven 8h-12h / 13h-17h</p>
           <div class="agency-actions">
-            <a class="btn btn-secondary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-primary" href="#" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241093420">Appeler</a>
           </div>
         </div>
@@ -442,7 +474,7 @@ color: #fff !important;
           <h3>Cabinet de recrutement</h3>
           <p class="small">Cabinet local pour recrutements CDI — Horaires : sur RDV</p>
           <div class="agency-actions">
-            <a class="btn btn-secondary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-primary" href="#" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
           </div>
         </div>
@@ -461,17 +493,17 @@ color: #fff !important;
   </section>
 
   <!-- SECTION 5 : Simulateur coût intérimaire -->
-  <section class="section container" aria-labelledby="sect-simulateur">
+  <section class="caculmind section container" aria-labelledby="sect-simulateur">
     <h2 id="sect-simulateur">Samsic pour les entreprises — Estimation coût intérimaire</h2>
     <p class="small kicker">Utilisez notre outil d’estimation du coût d’un intérimaire.</p>
-    <div style="margin-top:10px;padding:14px;border-radius:10px;border:1px solid #eef3f6;">
+    <div style="max-width: 600px; margin: auto; margin-top:10px;padding:20px;border-radius:10px;border:1px solid #eef3f6;;">
       <div class="small" style="margin-bottom:8px;color:#8aa9bd">
         <strong>Note :</strong> Notre outil est expérimental et estimatif, il vous aide à estimer le coût mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
       </div>
       <div class="calc">
         <label class="small">Combien souhaitez-vous rémunérer votre intérimaire (€/h) :</label>
         <input id="rate-input" type="text" placeholder="11,98" aria-label="taux horaire" />
-        <div class="result" aria-live="polite" id="calc-result" style="min-width:220px">
+        <div class="result" aria-live="polite" id="calc-result" style="width: 100%">
           <div>Coût horaire à payer : <strong id="hourly-cost">-</strong> €</div>
           <div>Coût mensuel (35h / semaine => 151.67h) : <strong id="monthly-cost">-</strong> €</div>
         </div>
@@ -486,14 +518,14 @@ color: #fff !important;
   <section class="section container" aria-labelledby="sect-why">
     <h2 id="sect-why">Pourquoi travailler avec nous</h2>
     <div class="features" style="margin-top:12px;">
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone1+.svg" alt="" /></div><div>Expertise multi-sectoriel</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone2.svg" alt="" /></div><div>Flexibilité</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone3.svg" alt="" /></div><div>Conseil personnalisé</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone4.svg" alt="" /></div><div>Solutions personnalisées</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone5.svg" alt="" /></div><div>Parcours dématérialisé</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone6.svg" alt="" /></div><div>Accompagnement de proximité</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone7.svg" alt="" /></div><div>Agilité — nous nous adaptons</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone8.svg" alt="" /></div><div>Réactivité</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone1+.svg" alt="" /></div><div>Expertise multi-sectoriel</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone2.svg" alt="" /></div><div>Flexibilité</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone3.svg" alt="" /></div><div>Conseil personnalisé</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone4.svg" alt="" /></div><div>Solutions personnalisées</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone5.svg" alt="" /></div><div>Parcours dématérialisé</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone6.svg" alt="" /></div><div>Accompagnement de proximité</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone7.svg" alt="" /></div><div>Agilité — nous nous adaptons</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone8.svg" alt="" /></div><div>Réactivité</div></div>
     </div>
   </section>
 
@@ -501,19 +533,19 @@ color: #fff !important;
   <section class="section container" aria-labelledby="sect-secteurs">
     <h2 id="sect-secteurs">Secteurs</h2>
     <div class="features" style="margin-top:12px;">
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone9.svg" alt="" /></div><div>Logistique</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone10.svg" alt="" /></div><div>BTP</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone11.svg" alt="" /></div><div>Horticulture</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone12.svg" alt="" /></div><div>Propreté</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone13.svg" alt="" /></div><div>Agroalimentaire</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone14.svg" alt="" /></div><div>Commerce</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone15.svg" alt="" /></div><div>Industrie</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone16.svg" alt="" /></div><div>Agriculture</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone17.svg" alt="" /></div><div>Tertiaire</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone18.svg" alt="" /></div><div>Services</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone19.svg" alt="" /></div><div>Médical</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone20.svg" alt="" /></div><div>Restauration</div></div>
-      <div class="feature"><div class="icon"><img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone21.svg" alt="" /></div><div>Télécom</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone9.svg" alt="" /></div><div>Logistique</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone10.svg" alt="" /></div><div>BTP</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone11.svg" alt="" /></div><div>Horticulture</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone12.svg" alt="" /></div><div>Propreté</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone13.svg" alt="" /></div><div>Agroalimentaire</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone14.svg" alt="" /></div><div>Commerce</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone15.svg" alt="" /></div><div>Industrie</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone16.svg" alt="" /></div><div>Agriculture</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone17.svg" alt="" /></div><div>Tertiaire</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone18.svg" alt="" /></div><div>Services</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone19.svg" alt="" /></div><div>Médical</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone20.svg" alt="" /></div><div>Restauration</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone21.svg" alt="" /></div><div>Télécom</div></div>
     </div>
   </section>
 
