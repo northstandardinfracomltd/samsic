@@ -176,7 +176,14 @@ cursor: default !important;
 /* Section 5 simulateur */
 .calc{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .calc input[type="text"]{padding:10px;border-radius:8px;border:1px solid #dfe7eb;width:160px}
-.calc .result{background:#f7fbff;padding:12px;border-radius:8px;border:1px solid #e8f3fb}
+.calc .result{
+      background: #2e3945;
+    padding: 12px;
+    color: #fff !important;
+    border-radius: 12px;
+    border: 1px solid #3a4856;
+    cursor: default;
+}
 
 /* Feature grids */
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -336,6 +343,30 @@ box-shadow: 0 0 0px 6px #25303c1f !important;
   right: 20px;
 }
 
+
+.planet {
+    max-width: 150px;
+}
+
+.kirikou {
+color: #fff !important;
+}
+
+.bamboo {
+    padding: 11px 17px;
+    font-weight: 700;
+    background: #028cd1;
+    font-family: 'VinciSans' !important;
+    color: white;
+    border-radius: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    margin: auto !important;
+}
+
+.bargot {
+color: #fff !important;
+}
 </style>
 </head>
 <body>
@@ -407,28 +438,28 @@ Tél: 02 41 05 05 95
 
 
     <h2 id="sect-localities">Votre mission en intérim sur Angers ou ses alentours.</h2>
-    <p class="small">Votre Angers d'intérim Samsic Angers est active sur Angers centre et les alentours jusqu'à 10km.</p>
+    <p class="small">Votre agence d'intérim Samsic est active sur Angers et ses alentours (rayon d'environ 10km).</p>
 
     <div class="localities-grid" style="margin-top:14px;">
       <!-- 3 grands encarts (remplace background-image url() par tes src) -->
       <a class="card-large" href="/angers" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Angers.png');" aria-label="Offres Angers">
         <div>
           <h3 class="samsicville" style="margin:0;font-size:20px">Angers</h3>
-          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Offres d'intérim à Angers — mécaniciens, caristes, commerce...</p>
+          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Samsic Agence Intérim Angers.</p>
         </div>
       </a>
 
       <a class="card-large" href="/verrieres-en-anjou" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Verrieres+Anjou.png');" aria-label="Offres Verrieres en Anjou">
         <div>
           <h3 class="samsicville" style="margin:0;font-size:20px">Verrières-en-Anjou</h3>
-          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Vos missions près de Verrières en Anjou.</p>
+          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Samsic Agence Intérim Verrières-en-Anjou.</p>
         </div>
       </a>
 
       <a class="card-large" href="/beaucouze" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Beaucouze%CC%81.png');" aria-label="Offres Beaucouzé">
         <div>
           <h3 class="samsicville" style="margin:0;font-size:20px">Beaucouzé</h3>
-          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Solutions intérim à Beaucouzé.</p>
+          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Samsic Agence Intérim Angers Beaucouzé.</p>
         </div>
       </a>
     </div>
@@ -636,21 +667,20 @@ Tél: 02 41 05 05 95
 
     <!-- SECTION 5 : Simulateur coût intérimaire -->
   <section class="caculmind section container" aria-labelledby="sect-simulateur">
-    <h2 id="sect-simulateur">Samsic pour les entreprises — Estimation coût intérimaire</h2>
-    <p class="small kicker">Utilisez notre outil d’estimation du coût d’un intérimaire.</p>
-    <div style="max-width: 600px; margin: auto; margin-top:10px;padding:20px;border-radius:10px;border:1px solid #eef3f6;;">
-      <div class="small" style="margin-bottom:8px;color:#8aa9bd">
-        <strong>Note :</strong> Notre outil est expérimental et estimatif, il vous aide à estimer le coût mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
+    <h2 class="kirikou" id="sect-simulateur">Samsic Entreprises : Outil Estimation Rapide Coût Intérimaire</h2>
+    <div style="max-width: 600px; margin: auto; margin-top:10px;     text-align: center; padding:20px;border-radius:10px;border:0px solid transparent;;">
+      <div class="small" style="margin-bottom:8px;color:#ffffff">
+        <strong>Observation :</strong> Notre outil est estimatif, il vous aide à estimer et comprendre le coût, mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
       </div>
       <div class="calc">
-        <label class="small">Combien souhaitez-vous rémunérer votre intérimaire (€/h) :</label>
-        <input id="rate-input" type="text" placeholder="11,98" aria-label="taux horaire" />
+        <label class="bargot small">Combien souhaitez-vous rémunérer votre intérimaire (€/h)</label>
+        <input id="rate-input" type="text" placeholder="ex: 11,88" aria-label="taux horaire" />
         <div class="result" aria-live="polite" id="calc-result" style="width: 100%">
-          <div>Coût horaire à payer : <strong id="hourly-cost">-</strong> €</div>
-          <div>Coût mensuel (35h / semaine => 151.67h) : <strong id="monthly-cost">-</strong> €</div>
+          <div>Coût horaire à payer : <strong id="hourly-cost">-</strong>€</div>
+          <div>Coût mensuel (35h / semaine => 151.67h) : <strong id="monthly-cost">-</strong>€</div>
         </div>
         <div style="margin-left:auto">
-          <button class="btn btn-primary" id="btn-rdv">Prenez-rendez / être rappelé</button>
+          <button class="bamboo" id="btn-rdv">Contactez Samsic Angers</button>
         </div>
       </div>
     </div>
@@ -673,7 +703,7 @@ Tél: 02 41 05 05 95
       <strong>SAMSIC Emploi Angers</strong>
       <div class="small">52 rue Elisabeth Lion — 49000 Angers — Tél : 02 41 05 05 95</div>
     </div>
-    <div class="small">© <span id="year"></span> SAMSIC Emploi — Tous droits réservés</div>
+    <div class="small">© <span id="year"></span>Samsic Angers — Tous droits réservés</div>
   </div>
 </footer>
 
