@@ -303,26 +303,6 @@ max-width: 70% !important;
   border-radius: 6px;
 }
 
-/* Sur grand écran : deux colonnes égales */
-@media (min-width: 768px) {
-  .responsive-photosXO {
-    /* chaque image prendra la moitié de la largeur disponible */
-  }
-  .responsive-photosXO {
-    width: calc(50% - 6px); /* -6px pour compenser le gap (gap/2) */
-  }
-}
-
-/* Sur mobile : empilement vertical */
-@media (max-width: 767.98px) {
-  .responsive-photosXO {
-    flex-direction: column;
-    gap: 10px;              /* espace vertical */
-  }
-  .responsive-photos__img {
-    width: 100%;
-  }
-}
 
 
 </style>
