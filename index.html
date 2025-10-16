@@ -130,7 +130,7 @@ body{
   padding:36px 20px;border-top:0px solid #fff;     margin-bottom: 30px;
 }
 .section h2{
-  margin:0 0 16px 0;font-size:20px;color:var(--primary);font-weight:700;
+ cursor: default; margin:0 0 16px 0;font-size:20px;color:var(--primary);font-weight:700;
 }
 
 /* Section 1 - localities */
@@ -175,7 +175,19 @@ cursor: default !important;
 
 /* Section 5 simulateur */
 .calc{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.calc input[type="text"]{padding:10px;border-radius:8px;border:1px solid #dfe7eb;width:160px}
+.calc input[type="text"]{
+  padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    background: #25303c;
+    width: 160px;
+    color: #fff;
+    text-align: center;
+    width: 90px;
+    font-family: 'VinciSans' !important;
+    font-weight: 800;
+    font-size: 15px;
+}
 .calc .result{
       background: #2e3945;
     padding: 12px;
@@ -355,13 +367,16 @@ color: #fff !important;
 .bamboo {
     padding: 11px 17px;
     font-weight: 700;
+    width: 100%;
     background: #028cd1;
     font-family: 'VinciSans' !important;
     color: white;
     border-radius: 45px;
     font-size: 15px;
     text-decoration: none;
-    margin: auto !important;
+    margin-right: auto !important;
+    border: 1px solid #25303c;
+    cursor: pointer !important;
 }
 
 .bargot {
@@ -420,16 +435,15 @@ Tél: 02 41 05 05 95
       <p>Notre expertise : <strong>travail temporaire</strong>, <strong>recrutement CDI</strong>, <strong>formation</strong>. Intervention locale à Angers et alentours.</p>
 
       <div class="benefits">
-        <div class="benefit"><div><strong>— Travail temporaire :</strong></div><div> sourcing, formation, administration, contrat, paies, attestations, mutuelle.</div></div>
-        <div class="benefit"><div><strong>— Recrutement CDI :</strong></div><div>cabinet local, trouver le bon profil.</div></div>
-        <div class="benefit"><div><strong>— Formation à votre dimension :</strong></div><div>programmes intérimaires avec notre centre de formation.</div></div>
+        <div class="benefit"><strong>— Travail temporaire :</strong> sourcing, formation, administration, contrat, paies, attestations, mutuelle.</div>
+        <div class="benefit"><strong>— Recrutement CDI :</strong> cabinet local, trouver le bon profil.</div>
+        <div class="benefit"><strong>— Formation à votre dimension :</strong> programmes intérimaires avec notre centre de formation.</div>
       </div>
     </div>
   </section>
 
   <!-- SECTION 1 Localités -->
   <section class="section container" aria-labelledby="sect-localities">
-
     <div class="gridpic">
   <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Accueil+Samsic+Angers.png" alt="agence interim angers" class="elpic">
   <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Fac%CC%A7ade+Samsic+Angers.png" alt="agence interim angers" class="elpic">
@@ -545,7 +559,7 @@ Tél: 02 41 05 05 95
       <div class="agency-card">
         <div class="agency-info">
           <h3>Samsic Intérim Angers</h3>
-          <p class="small">Créneaux : 9h-12h et 14h-18h. Adresse: 52 Rue Elisabeth Lion, 49100 Angers. Tél: 02 41 05 05 95.</p>
+          <p class="small">Créneaux : 9h-12h et 14h-18h.<br>Adresse: 52 Rue Elisabeth Lion, 49100 Angers.<br>Tél: 02 41 05 05 95.<br>Tramway : Ligne A arrêt Terra Botanica.<br>En voiture : via l’autoroute A11 sortie n°16.<br>Parking gratuit & bornes sécurisées pour vélos.</p>
           <div class="agency-actions">
             <a class="btn btn-primary" href="https://maps.app.goo.gl/FkxvEwJcdfajLDVw5" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
@@ -557,7 +571,7 @@ Tél: 02 41 05 05 95
       <div class="agency-card">
         <div class="agency-info">
           <h3>Samsic Intérim Angers BTP</h3>
-          <p class="small">Créneaux : 9h-12h et 14h-18h. Adresse: 20 Place Terra Botanica, 49100 Angers. Tél: 02 41 09 34 20.</p>
+          <p class="small">Créneaux : 9h-12h et 14h-18h.<br>Adresse: 20 Place Terra Botanica, 49100 Angers.<br>Tél: 02 41 09 34 20.<br>Tramway : Ligne A arrêt Jean-Moulin.<br>En voiture : via l’autoroute A11 sortie n°16.<br>Parking gratuit & bornes sécurisées pour vélos.</p>
           <div class="agency-actions">
             <a class="btn btn-primary" href="https://maps.app.goo.gl/FkxvEwJcdfajLDVw5" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241093420">Appeler</a>
@@ -569,7 +583,7 @@ Tél: 02 41 05 05 95
       <div class="agency-card">
         <div class="agency-info">
           <h3>Cabinet de recrutement</h3>
-          <p class="small">Créneaux : Sur RDV. Adresse: 52 Rue Elisabeth Lion, 49100 Angers. Tél: 02 41 05 05 95.</p>
+          <p class="small">Créneaux : Sur RDV.<br>Adresse: 52 Rue Elisabeth Lion, 49100 Angers.<br>Tél: 02 41 05 05 95.</p>
           <div class="agency-actions">
             <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
           </div>
@@ -655,7 +669,7 @@ Tél: 02 41 05 05 95
   <!-- SECTION 11 Processus humain -->
   <section class="section container" aria-labelledby="sect-processus">
     <h2 id="sect-processus">Une agence d'intérim à Angers proche de vous.</h2>
-    <ol style="margin-top:12px">
+    <ol style="margin-top:12px; cursor: default;">
       <li>Entretiens : systématiques de nos intérimaires en agence et visites des sites clients.</li>
       <li>Rappels : horaires, remise du livret d’accueil et EPI, visites médicales et contrôle des documents.</li>
       <li>Tests : sécurité, gestes/postures, mise en situation, AssessFirst.</li>
@@ -670,16 +684,16 @@ Tél: 02 41 05 05 95
     <h2 class="kirikou" id="sect-simulateur">Samsic Entreprises : Outil Estimation Rapide Coût Intérimaire</h2>
     <div style="max-width: 600px; margin: auto; margin-top:10px;     text-align: center; padding:20px;border-radius:10px;border:0px solid transparent;;">
       <div class="small" style="margin-bottom:8px;color:#ffffff">
-        <strong>Observation :</strong> Notre outil est estimatif, il vous aide à estimer et comprendre le coût, mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
+        <strong>Avertissement :</strong> Notre outil est estimatif, il vous aide à estimer et comprendre le coût, mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
       </div>
       <div class="calc">
-        <label class="bargot small">Combien souhaitez-vous rémunérer votre intérimaire (€/h)</label>
+        <label class="bargot small">Combien souhaitez-vous rémunérer votre intérimaire (€/h)</label><br>
         <input id="rate-input" type="text" placeholder="ex: 11,88" aria-label="taux horaire" />
         <div class="result" aria-live="polite" id="calc-result" style="width: 100%">
           <div>Coût horaire à payer : <strong id="hourly-cost">-</strong>€</div>
           <div>Coût mensuel (35h / semaine => 151.67h) : <strong id="monthly-cost">-</strong>€</div>
         </div>
-        <div style="margin-left:auto">
+        <div style="margin:auto">
           <button class="bamboo" id="btn-rdv">Contactez Samsic Angers</button>
         </div>
       </div>
@@ -689,7 +703,7 @@ Tél: 02 41 05 05 95
   
 
     <section class="section container" aria-labelledby="sect-processus">
-    <ol style="margin-top:12px">
+    <ol style="margin-top:12px; color: #6b7680; cursor: default; text-align: center;">
     <p>      agence interim Angers • agence interim Verrieres en Anjou • agence interim Beaucouzé • agence interim Saint Serge • agence interim Angers Est • agence interim Angers Ouest • agence interim Angers Sud • agence interim Angers Nord • agence interim Angers Centre • agence interim Belle Beille • agence interim Lac de Maine • agence interim La Baumette • agence interim Frémur • agence interim Le Frémureau • agence interim La Baudrairie • agence interim Roche Marotte • agence interim Justices • agence interim Cité Jeannine • agence interim Bel Œil • agence interim La Fayette • agence interim La Paperie • agence interim Madeleine • agence interim Saint Léonard • agence interim Croix Banchais • agence interim Monplaisir • agence interim Les Claveries • agence interim Saint Aubin • agence interim Avrillé • agence interim Montreuil Juigné • agence interim Écouflant • agence interim Trélazé • agence interim Les Ponts de Cé • agence interim Sainte Gemmes sur Loire • agence interim Bouchemaine • agence interim Mûrs Erigné • agence interim Saint Barthélemy Anjou • agence interim Longuenée en Anjou • agence interim Villeveque • agence interim Briollay • agence interim Saint Clément de la Place • agence interim Le Plessis Grammoire • agence interim Andard • agence interim Corné • agence interim Loire Authion • agence interim Bécon les Granits • agence interim Saint Lambert la Potherie • agence interim Saint Martin du Fouilloux • agence interim Denée • agence interim Mozé sur Louet • agence interim Brissac • agence interim La Possonière • agence interim Savennières • agence interim Chalonnes sur Loire </p>
     </ol>
   </section>
@@ -820,7 +834,7 @@ jobs.forEach((job, i)=>{
   div.className = 'job-card';
   div.innerHTML = `
     <h4>${job}</h4>
-    <p class="small" style="color:var(--muted)">Description courte pour ${job} — missions, compétences requises et conditions.</p>
+    <p class="small" style="color:var(--muted)">Missions chez Samsic Emploi de ${job} à Angers ou ses alentours.</p>
     <div class="job-actions">
       <a class="btn btn-primary" href="#postuler" aria-label="Postuler ${job}">Postuler</a>
       <button class="btn btn-ghost" data-job-index="${i}" aria-haspopup="dialog">Fiche Métier</button>
