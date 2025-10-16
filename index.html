@@ -285,22 +285,21 @@ max-width: 70% !important;
 }
 
 /* Conteneur flexible */
-.responsive-photosXO {
+.gridpic {
   display: flex;
-  gap: 12px;                /* espace entre les images sur grand écran */
+  max-width: 970px;
+  width: 100%;
+  gap: 15px;                /* espace entre les images sur grand écran */
   align-items: stretch;     /* aligne les images par hauteur */
   justify-content: center;
   flex-wrap: nowrap;
 }
 
 /* Images : s'adaptent au conteneur */
-.responsive-photosXO {
-  width: 100%;
+.elpic {
+  width: 50%;
   height: auto;
-  max-width: 100%;
-  object-fit: cover;        /* garde le recadrage propre si hauteur fixe */
-  display: block;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 
@@ -361,9 +360,9 @@ max-width: 70% !important;
   <!-- SECTION 1 Localités -->
   <section class="section container" aria-labelledby="sect-localities">
 
-    <div class="responsive-photosXO">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Accueil+Samsic+Angers.png" alt="Description de l'image 1" class="responsive-photosXO">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Fac%CC%A7ade+Samsic+Angers.png" alt="Description de l'image 2" class="responsive-photosXO">
+    <div class="gridpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Accueil+Samsic+Angers.png" alt="Description de l'image 1" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Fac%CC%A7ade+Samsic+Angers.png" alt="Description de l'image 2" class="elpic">
 </div>
 
 
