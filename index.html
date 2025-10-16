@@ -127,7 +127,7 @@ body{
 
 /* Section headers */
 .section{
-  padding:36px 20px;border-top:1px solid #f0f2f4;
+  padding:36px 20px;border-top:0px solid #fff;     margin-bottom: 30px;
 }
 .section h2{
   margin:0 0 16px 0;font-size:20px;color:var(--primary);font-weight:700;
@@ -181,7 +181,7 @@ body{
 @media (max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.features{grid-template-columns:1fr}}
 .feature{display:flex;gap:12px;align-items:center}
-.feature .icon{width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#eef6fb}
+.feature .icon{width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#fff}
 
 /* Footer */
 .footer{padding:24px 20px;border-top:1px solid #f0f2f4;background:#fff;color:var(--muted)}
@@ -256,7 +256,7 @@ text-decoration: none !important;
     margin: 12px;
     margin: auto;
     width: 98%;
-    border-radius: 12px;
+    border-radius: 0px;
     padding: 25px;
         max-width: 970px;
 }
@@ -266,7 +266,7 @@ text-decoration: none !important;
     margin: 12px;
     margin: auto;
     width: 98%;
-    border-radius: 12px;
+    border-radius: 0px;
     padding: 25px;
         max-width: 970px;
 }
@@ -308,7 +308,34 @@ display: flex;
   border-radius: 0px;
 }
 
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  padding: 12px 20px;
+  background: #007bff;
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 9999;
+}
 
+/* Effet au survol */
+.floating-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Position gauche et droite */
+.left-btn {
+  left: 20px;
+}
+
+.right-btn {
+  right: 20px;
+}
 
 </style>
 </head>
@@ -349,6 +376,13 @@ display: flex;
 </header>
 
 <main>
+<a href="mailto:p.roesch@samsic-emploi.fr" class="floating-btn left-btn">
+  ✉️ Email
+</a>
+
+<a href="tel:0241050595" class="floating-btn right-btn">
+  📞 Appeler
+</a>
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-left container">
       <div class="fuze kicker">Agence intérim & recrutement local</div>
@@ -367,8 +401,8 @@ display: flex;
   <section class="section container" aria-labelledby="sect-localities">
 
     <div class="gridpic">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Accueil+Samsic+Angers.png" alt="Description de l'image 1" class="elpic">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Fac%CC%A7ade+Samsic+Angers.png" alt="Description de l'image 2" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Accueil+Samsic+Angers.png" alt="agence interim angers" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Fac%CC%A7ade+Samsic+Angers.png" alt="agence interim angers" class="elpic">
 </div>
 
 
@@ -469,8 +503,8 @@ display: flex;
 
 
       <div class="gridpic">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+Interim+Angers.png" alt="Description de l'image 1" class="elpic">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Angers+Interim+Agence.png" alt="Description de l'image 2" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+Interim+Angers.png" alt="agence interim angers" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Angers+Interim+Agence.png" alt="Agence Interim Angers" class="elpic">
 </div>
 
   <!-- SECTION 3 : Agences -->
@@ -525,7 +559,86 @@ display: flex;
     </div>
   </section>
 
-  <!-- SECTION 5 : Simulateur coût intérimaire -->
+
+
+  <!-- SECTION 6 Pourquoi travailler avec nous -->
+  <section class="section container" aria-labelledby="sect-why">
+    <h2 id="sect-why">Pourquoi travailler avec l'agence d'intérim Samsic Angers.</h2>
+    <div class="features" style="margin-top:12px;">
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone1+.svg" alt="" /></div><div>Expertise multi-sectoriel</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone2.svg" alt="" /></div><div>Flexibilité</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone3.svg" alt="" /></div><div>Conseil personnalisé</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone4.svg" alt="" /></div><div>Solutions personnalisées</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone5.svg" alt="" /></div><div>Parcours dématérialisé</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone6.svg" alt="" /></div><div>Accompagnement de proximité</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone7.svg" alt="" /></div><div>Agilité — nous nous adaptons</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone8.svg" alt="" /></div><div>Réactivité</div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 Secteurs -->
+  <section class="section container" aria-labelledby="sect-secteurs">
+    <h2 id="sect-secteurs">L'intérim à Angers dans de nombreux secteurs.</h2>
+    <div class="features" style="margin-top:12px;">
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone9.svg" alt="" /></div><div>Logistique</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone10.svg" alt="" /></div><div>BTP</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone11.svg" alt="" /></div><div>Horticulture</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone12.svg" alt="" /></div><div>Propreté</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone13.svg" alt="" /></div><div>Agroalimentaire</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone14.svg" alt="" /></div><div>Commerce</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone15.svg" alt="" /></div><div>Industrie</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone16.svg" alt="" /></div><div>Agriculture</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone17.svg" alt="" /></div><div>Tertiaire</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone18.svg" alt="" /></div><div>Services</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone19.svg" alt="" /></div><div>Médical</div></div>
+      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone20.svg" alt="" /></div><div>Restauration</div></div>
+    </div>
+  </section>
+
+
+        <div class="gridpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Interim+Angers.png" alt="agence interim angers" class="elpic">
+  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Angers+Interim.png" alt="Agence Interim Angers" class="elpic">
+</div>
+
+
+  <!-- SECTION 8 Histoire -->
+  <section class="section container" aria-labelledby="sect-histoire">
+    <h2 id="sect-histoire">L'histoire de Samsic.</h2>
+    <p>
+      C’est en 1986 que Christian Roulleau, breton autodidacte crée SAMSIC, une entreprise de propreté basée à Rennes. Aujourd’hui, le Groupe Samsic couvre plus de 150 lignes de services avec une présence dans 27 pays.
+      En 2019, Christian Roulleau transmet les rênes de son groupe familial à Thierry Geffroy afin de poursuivre son développement. Samsic est présent dans 27 pays, c’est un groupe de 136 000 collaborateurs pour 30 000 clients.
+    </p>
+  </section>
+
+  <!-- SECTION 9 Environnement -->
+  <section class="section container" aria-labelledby="sect-envir">
+    <h2 id="sect-envir">Protéger l'environnement ensemble.</h2>
+    <p>Dans le cadre de son programme de développement durable, Samsic PLANET 2030 lancé en 2020, Samsic s’est fixé des engagements concrets, organisés autour de quatre piliers : la préservation de notre environnement, la diversité et la culture de nos talents, le développement des services coresponsables et la contribution à une société solidaire et durable.</p>
+    <img src="https://via.placeholder.com/1200x400?text=Planet+2030" alt="Samsic Planet 2030" loading="lazy" style="margin-top:12px;border-radius:8px" />
+  </section>
+
+  <!-- SECTION 10 RS1 & QHSE -->
+  <section class="section container" aria-labelledby="sect-qhse">
+    <h2 id="sect-qhse">Engagement RS1 et politique QHSE.</h2>
+    <p>Objectif : offrir le même niveau de qualité de service à chacun de ses clients dans une démarche d’amélioration continue. Certifications : ISO 9001, ISO 14001, ISO 45001, CEFRI (selon agences). Médaille d'argent Ecovadis 2024.</p>
+    <img src="https://via.placeholder.com/1200x400?text=QHSE" alt="Certifications Samsic" loading="lazy" style="margin-top:12px;border-radius:8px" />
+  </section>
+
+  <!-- SECTION 11 Processus humain -->
+  <section class="section container" aria-labelledby="sect-processus">
+    <h2 id="sect-processus">Une agence d'intérim à Angers proche de vous.</h2>
+    <ol style="margin-top:12px">
+      <li>Entretiens : systématiques de nos intérimaires en agence et visites des sites clients.</li>
+      <li>Rappels : horaires, remise du livret d’accueil et EPI, visites médicales et contrôle des documents.</li>
+      <li>Tests : sécurité, gestes/postures, mise en situation, AssessFirst.</li>
+      <li>Suivi et dématérialisation : contrats, relevés d’heures, bulletins, factures.</li>
+      <li>Accompagnement et évaluations : enquêtes et bilans de fin de mission.</li>
+    </ol>
+
+  </section>
+
+    <!-- SECTION 5 : Simulateur coût intérimaire -->
   <section class="caculmind section container" aria-labelledby="sect-simulateur">
     <h2 id="sect-simulateur">Samsic pour les entreprises — Estimation coût intérimaire</h2>
     <p class="small kicker">Utilisez notre outil d’estimation du coût d’un intérimaire.</p>
@@ -547,82 +660,7 @@ display: flex;
     </div>
   </section>
 
-  <!-- SECTION 6 Pourquoi travailler avec nous -->
-  <section class="section container" aria-labelledby="sect-why">
-    <h2 id="sect-why">Pourquoi travailler avec nous</h2>
-    <div class="features" style="margin-top:12px;">
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone1+.svg" alt="" /></div><div>Expertise multi-sectoriel</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone2.svg" alt="" /></div><div>Flexibilité</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone3.svg" alt="" /></div><div>Conseil personnalisé</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone4.svg" alt="" /></div><div>Solutions personnalisées</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone5.svg" alt="" /></div><div>Parcours dématérialisé</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone6.svg" alt="" /></div><div>Accompagnement de proximité</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone7.svg" alt="" /></div><div>Agilité — nous nous adaptons</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone8.svg" alt="" /></div><div>Réactivité</div></div>
-    </div>
-  </section>
-
-  <!-- SECTION 7 Secteurs -->
-  <section class="section container" aria-labelledby="sect-secteurs">
-    <h2 id="sect-secteurs">Secteurs</h2>
-    <div class="features" style="margin-top:12px;">
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone9.svg" alt="" /></div><div>Logistique</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone10.svg" alt="" /></div><div>BTP</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone11.svg" alt="" /></div><div>Horticulture</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone12.svg" alt="" /></div><div>Propreté</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone13.svg" alt="" /></div><div>Agroalimentaire</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone14.svg" alt="" /></div><div>Commerce</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone15.svg" alt="" /></div><div>Industrie</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone16.svg" alt="" /></div><div>Agriculture</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone17.svg" alt="" /></div><div>Tertiaire</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone18.svg" alt="" /></div><div>Services</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone19.svg" alt="" /></div><div>Médical</div></div>
-      <div class="feature"><div class="icon"><img class="bousy" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/samsic+icone20.svg" alt="" /></div><div>Restauration</div></div>
-    </div>
-  </section>
-
-
-        <div class="gridpic">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Interim+Angers.png" alt="Description de l'image 1" class="elpic">
-  <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Angers+Interim.png" alt="Description de l'image 2" class="elpic">
-</div>
-
-
-  <!-- SECTION 8 Histoire -->
-  <section class="section container" aria-labelledby="sect-histoire">
-    <h2 id="sect-histoire">L'histoire Samsic</h2>
-    <p>
-      C’est en 1986 que Christian Roulleau, breton autodidacte crée SAMSIC, une entreprise de propreté basée à Rennes. Aujourd’hui, le Groupe Samsic couvre plus de 150 lignes de services avec une présence dans 27 pays.
-      En 2019, Christian Roulleau transmet les rênes de son groupe familial à Thierry Geffroy afin de poursuivre son développement. Samsic est présent dans 27 pays, c’est un groupe de 136 000 collaborateurs pour 30 000 clients.
-    </p>
-  </section>
-
-  <!-- SECTION 9 Environnement -->
-  <section class="section container" aria-labelledby="sect-envir">
-    <h2 id="sect-envir">Protéger l'environnement ensemble</h2>
-    <p>Dans le cadre de son programme de développement durable, Samsic PLANET 2030 lancé en 2020, Samsic s’est fixé des engagements concrets, organisés autour de quatre piliers : la préservation de notre environnement, la diversité et la culture de nos talents, le développement des services coresponsables et la contribution à une société solidaire et durable.</p>
-    <img src="https://via.placeholder.com/1200x400?text=Planet+2030" alt="Samsic Planet 2030" loading="lazy" style="margin-top:12px;border-radius:8px" />
-  </section>
-
-  <!-- SECTION 10 RS1 & QHSE -->
-  <section class="section container" aria-labelledby="sect-qhse">
-    <h2 id="sect-qhse">Engagement RS1 et politique QHSE</h2>
-    <p>Objectif : offrir le même niveau de qualité de service à chacun de ses clients dans une démarche d’amélioration continue. Certifications : ISO 9001, ISO 14001, ISO 45001, CEFRI (selon agences). Médaille d'argent Ecovadis 2024.</p>
-    <img src="https://via.placeholder.com/1200x400?text=QHSE" alt="Certifications Samsic" loading="lazy" style="margin-top:12px;border-radius:8px" />
-  </section>
-
-  <!-- SECTION 11 Processus humain -->
-  <section class="section container" aria-labelledby="sect-processus">
-    <h2 id="sect-processus">Notre processus est humain</h2>
-    <ol style="margin-top:12px">
-      <li>Entretiens : systématiques de nos intérimaires en agence et visites des sites clients.</li>
-      <li>Rappels : horaires, remise du livret d’accueil et EPI, visites médicales et contrôle des documents.</li>
-      <li>Tests : sécurité, gestes/postures, mise en situation, AssessFirst.</li>
-      <li>Suivi et dématérialisation : contrats, relevés d’heures, bulletins, factures.</li>
-      <li>Accompagnement et évaluations : enquêtes et bilans de fin de mission.</li>
-    </ol>
-
-  </section>
+  
 
     <section class="section container" aria-labelledby="sect-processus">
     <ol style="margin-top:12px">
