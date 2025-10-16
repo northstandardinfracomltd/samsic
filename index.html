@@ -137,7 +137,6 @@ body{
 .localities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:900px){ .localities-grid{grid-template-columns:1fr} }
 .card-large{
-  text-decoration: none !important;
   position:relative;overflow:hidden;border-radius:12px;height:180px;color:#fff;display:flex;align-items:flex-end;padding:16px;
   background-size:cover;background-position:center;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -495,14 +494,14 @@ max-width: 70% !important;
 
   <!-- SECTION 5 : Simulateur coût intérimaire -->
   <section class="caculmind section container" aria-labelledby="sect-simulateur">
-    <h2 class="figolu1" id="sect-simulateur">Samsic pour les entreprises — Estimation coût intérimaire</h2>
-    <p class="figolu2 small kicker">Utilisez notre outil d’estimation du coût d’un intérimaire.</p>
+    <h2 id="sect-simulateur">Samsic pour les entreprises — Estimation coût intérimaire</h2>
+    <p class="small kicker">Utilisez notre outil d’estimation du coût d’un intérimaire.</p>
     <div style="max-width: 600px; margin: auto; margin-top:10px;padding:20px;border-radius:10px;border:1px solid #eef3f6;;">
-      <div class="figolu3 small" style="margin-bottom:8px;color:#8aa9bd">
-        <strong >Note :</strong> Notre outil est expérimental et estimatif, il vous aide à estimer le coût mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
+      <div class="small" style="margin-bottom:8px;color:#8aa9bd">
+        <strong>Note :</strong> Notre outil est expérimental et estimatif, il vous aide à estimer le coût mais ne représente pas un engagement ou l’offre précise en agence, n’hésitez pas à nous contacter.
       </div>
       <div class="calc">
-        <label class="small figolu4">Combien souhaitez-vous rémunérer votre intérimaire (€/h) :</label>
+        <label class="small">Combien souhaitez-vous rémunérer votre intérimaire (€/h) :</label>
         <input id="rate-input" type="text" placeholder="11,98" aria-label="taux horaire" />
         <div class="result" aria-live="polite" id="calc-result" style="width: 100%">
           <div>Coût horaire à payer : <strong id="hourly-cost">-</strong> €</div>
@@ -557,7 +556,6 @@ max-width: 70% !important;
       C’est en 1986 que Christian Roulleau, breton autodidacte crée SAMSIC, une entreprise de propreté basée à Rennes. Aujourd’hui, le Groupe Samsic couvre plus de 150 lignes de services avec une présence dans 27 pays.
       En 2019, Christian Roulleau transmet les rênes de son groupe familial à Thierry Geffroy afin de poursuivre son développement. Samsic est présent dans 27 pays, c’est un groupe de 136 000 collaborateurs pour 30 000 clients.
     </p>
-        <img src="https://via.placeholder.com/1200x400?text=QHSE" alt="Certifications Samsic" loading="lazy" style="margin-top:12px;border-radius:8px" />
   </section>
 
   <!-- SECTION 9 Environnement -->
@@ -584,12 +582,20 @@ max-width: 70% !important;
       <li>Suivi et dématérialisation : contrats, relevés d’heures, bulletins, factures.</li>
       <li>Accompagnement et évaluations : enquêtes et bilans de fin de mission.</li>
     </ol>
-        <img src="https://via.placeholder.com/1200x400?text=QHSE" alt="Certifications Samsic" loading="lazy" style="margin-top:12px;border-radius:8px" />
   </section>
 
 </main>
 
-
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>SAMSIC Emploi Angers</strong>
+      <div class="small">52 rue Elisabeth Lion — 49000 Angers — Tél : 02 41 05 05 95</div>
+    </div>
+    <div class="small">© <span id="year"></span> SAMSIC Emploi — Tous droits réservés</div>
+  </div>
+</footer>
 
 <!-- Modals: Contact form (reusable) -->
 <div class="modal" id="modal-contact" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="contact-title">
