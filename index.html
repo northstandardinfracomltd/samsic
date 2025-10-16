@@ -140,6 +140,8 @@ body{
   position:relative;overflow:hidden;border-radius:12px;height:180px;color:#fff;display:flex;align-items:flex-end;padding:16px;
   background-size:cover;background-position:center;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-decoration: none !important;
+cursor: default !important;
 }
 .card-large a{color:#fff;text-decoration:none;font-weight:800}
 .tag-cloud{margin-top:14px;display:flex;flex-wrap:wrap;gap:9px}
@@ -280,9 +282,7 @@ color: #fff !important;
 .bousy {
 max-width: 70% !important;
 }
-.feature:hover {
-  transform: scale(1.08);
-}
+
 
 /* Conteneur flexible */
 .gridpic {
@@ -309,23 +309,22 @@ display: flex;
 }
 
 .floating-btn {
-  position: fixed;
-  bottom: 20px;
-  padding: 12px 20px;
-  background: #007bff;
-  color: white;
-  border-radius: 50px;
-  font-size: 15px;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s, transform 0.3s;
-  z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    padding: 11px 17px;
+    font-weight: 700;
+    background: #25303c;
+    font-family: 'VinciSans' !important;
+    color: white;
+    border-radius: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    z-index: 9999;
 }
 
 /* Effet au survol */
 .floating-btn:hover {
-  background: #0056b3;
-  transform: scale(1.05);
+box-shadow: 0 0 0px 6px #25303c1f !important;
 }
 
 /* Position gauche et droite */
@@ -377,22 +376,22 @@ display: flex;
 
 <main>
 <a href="mailto:p.roesch@samsic-emploi.fr" class="floating-btn left-btn">
-  ✉️ Email
+Envoyer un email
 </a>
 
 <a href="tel:0241050595" class="floating-btn right-btn">
-  📞 Appeler
+Tél: 02 41 05 05 95
 </a>
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-left container">
-      <div class="fuze kicker">Agence intérim & recrutement local</div>
+      <div class="fuze kicker"> </div>
       <h1 id="hero-title">Agence <span class="S365 kicker">intérim</span> à <span id="rotating-city">Angers</span></h1>
       <p>Notre expertise : <strong>travail temporaire</strong>, <strong>recrutement CDI</strong>, <strong>formation</strong>. Intervention locale à Angers et alentours.</p>
 
       <div class="benefits">
-        <div class="benefit"><div><strong>Travail temporaire :</strong></div><div> sourcing, formation, administration, contrat, paies, attestations, mutuelle</div></div>
-        <div class="benefit"><div><strong>Recrutement CDI :</strong></div><div>cabinet local, trouver le bon profil</div></div>
-        <div class="benefit"><div><strong>Formation à votre dimension :</strong></div><div>programmes intérimaires avec notre centre de formation</div></div>
+        <div class="benefit"><div><strong>— Travail temporaire :</strong></div><div> sourcing, formation, administration, contrat, paies, attestations, mutuelle.</div></div>
+        <div class="benefit"><div><strong>— Recrutement CDI :</strong></div><div>cabinet local, trouver le bon profil.</div></div>
+        <div class="benefit"><div><strong>— Formation à votre dimension :</strong></div><div>programmes intérimaires avec notre centre de formation.</div></div>
       </div>
     </div>
   </section>
@@ -407,8 +406,8 @@ display: flex;
 
 
 
-    <h2 id="sect-localities">Vous recherchez un emploi sur Angers ?</h2>
-    <p class="small">Trouvez des opportunités proches de chez vous — nous couvrons Angers et les communes alentours.</p>
+    <h2 id="sect-localities">Votre mission en intérim sur Angers ou ses alentours.</h2>
+    <p class="small">Votre Angers d'intérim Samsic Angers est active sur Angers centre et les alentours jusqu'à 10km.</p>
 
     <div class="localities-grid" style="margin-top:14px;">
       <!-- 3 grands encarts (remplace background-image url() par tes src) -->
@@ -492,11 +491,11 @@ display: flex;
 
   <!-- SECTION 2 : CVthèque -->
   <section class="cvcon section container" aria-labelledby="sect-cv">
-    <h2 class="samsic1" id="sect-cv">Envoyer mon CV</h2>
+    <h2 class="samsic1" id="sect-cv">Partagez-nous votre profil.</h2>
     <div class="cv-cta">
       <p class="samsic2">Envoyez votre CV, complétez votre profil en quelques minutes et on s’occupe du reste.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="https://www.samsic-emploi.fr/inscription" target="_blank" rel="noopener">S'inscrire sur Samsic</a>
+        <a class="btn btn-primary" href="https://www.samsic-emploi.fr/inscription" target="_blank" rel="noopener">S'inscrire</a>
       </div>
     </div>
   </section>
@@ -509,15 +508,15 @@ display: flex;
 
   <!-- SECTION 3 : Agences -->
   <section class="section container" aria-labelledby="sect-agences">
-    <h2 id="sect-agences">Rencontrez vos interlocuteurs locaux à Angers</h2>
+    <h2 id="sect-agences">Rencontrez vos interlocuteurs locaux à Angers dans 3 pôles spécialisés.</h2>
     <div class="agency-grid">
       <!-- Agency 1 -->
       <div class="agency-card">
         <div class="agency-info">
-          <h3>Angers - 52 rue Elisabeth Lion</h3>
-          <p class="small">Agence générale — Recrutement & intérim. Horaires : Lun-Ven 8h30-12h / 13h30-17h30</p>
+          <h3>Samsic Intérim Angers</h3>
+          <p class="small">Créneaux : 9h-12h et 14h-18h. Adresse: 52 Rue Elisabeth Lion, 49100 Angers. Tél: 02 41 05 05 95.</p>
           <div class="agency-actions">
-            <a class="btn btn-primary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/FkxvEwJcdfajLDVw5" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
                     </div>
         </div>
@@ -526,10 +525,10 @@ display: flex;
       <!-- Agency 2 -->
       <div class="agency-card">
         <div class="agency-info">
-          <h3>Angers BTP — Place Terra Botanica</h3>
-          <p class="small">Spécialité : BTP — Horaires : Lun-Ven 8h-12h / 13h-17h</p>
+          <h3>Samsic Intérim Angers BTP</h3>
+          <p class="small">Créneaux : 9h-12h et 14h-18h. Adresse: 20 Place Terra Botanica, 49100 Angers. Tél: 02 41 09 34 20.</p>
           <div class="agency-actions">
-            <a class="btn btn-primary" href="#" aria-label="Y aller">Y aller</a>
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/FkxvEwJcdfajLDVw5" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241093420">Appeler</a>
           </div>
         </div>
@@ -539,9 +538,8 @@ display: flex;
       <div class="agency-card">
         <div class="agency-info">
           <h3>Cabinet de recrutement</h3>
-          <p class="small">Cabinet local pour recrutements CDI — Horaires : sur RDV</p>
+          <p class="small">Créneaux : Sur RDV. Adresse: 52 Rue Elisabeth Lion, 49100 Angers. Tél: 02 41 05 05 95.</p>
           <div class="agency-actions">
-            <a class="btn btn-primary" href="#" aria-label="Y aller">Y aller</a>
             <a class="btn btn-ghost" href="tel:+33241050595">Appeler</a>
           </div>
         </div>
@@ -551,8 +549,7 @@ display: flex;
 
   <!-- SECTION 4 : Offres d'emplois & fiches métiers -->
   <section class="section container" aria-labelledby="sect-offres">
-    <h2 id="sect-offres">Nos offres d'emplois et métiers à <span id="jobs-city">Angers</span></h2>
-    <p class="small">Consultez nos offres et découvrez les fiches métiers détaillées.</p>
+    <h2 id="sect-offres">Nos offres d'emplois et métiers à <span id="jobs-city">Angers</span>.</h2>
 
     <div class="jobs-grid" id="jobs-grid" style="margin-top:12px;">
       <!-- Liste dynamique des 16 offres -->
@@ -615,14 +612,13 @@ display: flex;
   <section class="section container" aria-labelledby="sect-envir">
     <h2 id="sect-envir">Protéger l'environnement ensemble.</h2>
     <p>Dans le cadre de son programme de développement durable, Samsic PLANET 2030 lancé en 2020, Samsic s’est fixé des engagements concrets, organisés autour de quatre piliers : la préservation de notre environnement, la diversité et la culture de nos talents, le développement des services coresponsables et la contribution à une société solidaire et durable.</p>
-    <img src="https://via.placeholder.com/1200x400?text=Planet+2030" alt="Samsic Planet 2030" loading="lazy" style="margin-top:12px;border-radius:8px" />
+    <img class="planet" src="https://civilpromaws.s3.eu-north-1.amazonaws.com/Samsic+.png" alt="Samsic Planet 2030" loading="lazy" style="margin-top:12px;border-radius:8px" />
   </section>
 
   <!-- SECTION 10 RS1 & QHSE -->
   <section class="section container" aria-labelledby="sect-qhse">
     <h2 id="sect-qhse">Engagement RS1 et politique QHSE.</h2>
     <p>Objectif : offrir le même niveau de qualité de service à chacun de ses clients dans une démarche d’amélioration continue. Certifications : ISO 9001, ISO 14001, ISO 45001, CEFRI (selon agences). Médaille d'argent Ecovadis 2024.</p>
-    <img src="https://via.placeholder.com/1200x400?text=QHSE" alt="Certifications Samsic" loading="lazy" style="margin-top:12px;border-radius:8px" />
   </section>
 
   <!-- SECTION 11 Processus humain -->
