@@ -136,8 +136,8 @@ body{
 .tag-cloud{margin-top:14px;display:flex;flex-wrap:wrap;gap:9px}
 .tag-cloud a{padding:8px 10px; cursor: default !important; background:#f6f8fa;border-radius:999px;color:var(--primary);text-decoration:none;font-size:14px;border:1px solid #eef3f6}
 
-.tag-cloud:hover {
-    box-shadow: 0 0 0px 6px #6f8cff29;
+.card-large a:hover {
+    box-shadow: 0 0 0px 6px #008cd221;
     cursor: default !important; 
 }
 
@@ -230,6 +230,27 @@ box-shadow: 0 0 0px 6px #25303c24 !important;
 .fuze {
     color: #fff !important;
 }
+
+.samsicville {
+text-decoration: none !important;
+}
+.samsicdetails {
+text-decoration: none !important;
+}
+
+.card-large:hover {
+  transition: transform 0.3s ease; /* animation fluide */
+}
+
+.cvcon {
+background: #25303c !important;
+}
+.samsic1 {
+color: #fff !important;
+}
+.samsic2 {
+color: #fff !important;
+}
 </style>
 </head>
 <body>
@@ -300,22 +321,22 @@ box-shadow: 0 0 0px 6px #25303c24 !important;
       <!-- 3 grands encarts (remplace background-image url() par tes src) -->
       <a class="card-large" href="/angers" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Angers.png');" aria-label="Offres Angers">
         <div>
-          <h3 style="margin:0;font-size:20px">Angers</h3>
-          <p style="margin-top:6px;font-size:14px">Offres d'intérim à Angers — mécaniciens, caristes, commerce...</p>
+          <h3 class="samsicville" style="margin:0;font-size:20px">Angers</h3>
+          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Offres d'intérim à Angers — mécaniciens, caristes, commerce...</p>
         </div>
       </a>
 
       <a class="card-large" href="/verrieres-en-anjou" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Verrieres+Anjou.png');" aria-label="Offres Verrieres en Anjou">
         <div>
-          <h3 style="margin:0;font-size:20px">Verrières-en-Anjou</h3>
-          <p style="margin-top:6px;font-size:14px">Vos missions près de Verrières en Anjou.</p>
+          <h3 class="samsicville" style="margin:0;font-size:20px">Verrières-en-Anjou</h3>
+          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Vos missions près de Verrières en Anjou.</p>
         </div>
       </a>
 
       <a class="card-large" href="/beaucouze" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.36)), url('https://civilpromaws.s3.eu-north-1.amazonaws.com/Agence+inte%CC%81rim+Samsic+a+Beaucouze%CC%81.png');" aria-label="Offres Beaucouzé">
         <div>
-          <h3 style="margin:0;font-size:20px">Beaucouzé</h3>
-          <p style="margin-top:6px;font-size:14px">Solutions intérim à Beaucouzé.</p>
+          <h3 class="samsicville" style="margin:0;font-size:20px">Beaucouzé</h3>
+          <p class="samsicdetails" style="margin-top:6px;font-size:14px">Solutions intérim à Beaucouzé.</p>
         </div>
       </a>
     </div>
@@ -377,10 +398,10 @@ box-shadow: 0 0 0px 6px #25303c24 !important;
   </section>
 
   <!-- SECTION 2 : CVthèque -->
-  <section class="section container" aria-labelledby="sect-cv">
-    <h2 id="sect-cv">Envoyer mon CV</h2>
+  <section class="cvcon section container" aria-labelledby="sect-cv">
+    <h2 class="samsic1" id="sect-cv">Envoyer mon CV</h2>
     <div class="cv-cta">
-      <p>Envoyez votre CV, complétez votre profil en quelques minutes et on s’occupe du reste.</p>
+      <p class="samsic2">Envoyez votre CV, complétez votre profil en quelques minutes et on s’occupe du reste.</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="https://www.samsic-emploi.fr/inscription" target="_blank" rel="noopener">S'inscrire sur Samsic</a>
       </div>
@@ -393,7 +414,7 @@ box-shadow: 0 0 0px 6px #25303c24 !important;
     <div class="agency-grid">
       <!-- Agency 1 -->
       <div class="agency-card">
-        <img src="https://via.placeholder.com/300x200?text=Agence+Angers" alt="Agence Angers - 52 rue Elisabeth Lion" loading="lazy" />
+        <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/carte2.png" alt="Agence Angers - 52 rue Elisabeth Lion" loading="lazy" />
         <div class="agency-info">
           <h3>Angers - 52 rue Elisabeth Lion</h3>
           <p class="small">Agence générale — Recrutement & intérim. Horaires : Lun-Ven 8h30-12h / 13h30-17h30</p>
@@ -407,7 +428,7 @@ box-shadow: 0 0 0px 6px #25303c24 !important;
 
       <!-- Agency 2 -->
       <div class="agency-card">
-        <img src="https://via.placeholder.com/300x200?text=Angers+BTP" alt="Agence Angers BTP - Place Terra Botanica" loading="lazy" />
+        <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/carte1.png" alt="Agence Angers BTP - Place Terra Botanica" loading="lazy" />
         <div class="agency-info">
           <h3>Angers BTP — Place Terra Botanica</h3>
           <p class="small">Spécialité : BTP — Horaires : Lun-Ven 8h-12h / 13h-17h</p>
@@ -421,7 +442,7 @@ box-shadow: 0 0 0px 6px #25303c24 !important;
 
       <!-- Agency 3 -->
       <div class="agency-card">
-        <img src="https://via.placeholder.com/300x200?text=Cabinet+de+recrutement" alt="Cabinet de recrutement - 52 rue Elisabeth Lion" loading="lazy" />
+        <img src="https://civilpromaws.s3.eu-north-1.amazonaws.com/carte3.png" alt="Cabinet de recrutement - 52 rue Elisabeth Lion" loading="lazy" />
         <div class="agency-info">
           <h3>Cabinet de recrutement</h3>
           <p class="small">Cabinet local pour recrutements CDI — Horaires : sur RDV</p>
