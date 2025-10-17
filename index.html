@@ -738,21 +738,32 @@ Tél: 02 41 05 05 95
       <h3 id="contact-title">Contact — Envoyer un message</h3>
       <button class="modal-close" data-close>&times;</button>
     </div>
-    <form id="contact-form" style="margin-top:8px;">
-      <input type="hidden" name="agency" id="contact-agency" value="" />
-      <label class="small">Nom</label>
-      <input name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
-      <label class="small">Email</label>
-      <input name="email" type="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
-      <label class="small">Téléphone</label>
-      <input name="phone" type="tel" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
-      <label class="small">Message</label>
-      <textarea name="message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px"></textarea>
-      <div style="display:flex;gap:8px;justify-content:flex-end">
-        <button type="button" class="btn btn-ghost" data-close>Annuler</button>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </div>
-    </form>
+<form id="contact-form" style="margin-top:8px;max-width:720px" novalidate>
+  <input type="hidden" name="agency" id="contact-agency" value="" />
+
+  <label class="small">Nom</label>
+  <input name="name" id="name" required
+         style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
+
+  <label class="small">Email</label>
+  <input name="email" id="email" type="email" required
+         style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
+
+  <label class="small">Téléphone</label>
+  <input name="phone" id="phone" type="tel"
+         style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px" />
+
+  <label class="small">Message</label>
+  <textarea name="message" id="message" rows="4"
+            style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf1;margin-bottom:8px"></textarea>
+
+  <div id="form-feedback" aria-live="polite" style="margin-bottom:8px;color:#333"></div>
+
+  <div style="display:flex;gap:8px;justify-content:flex-end">
+    <button type="button" class="btn btn-ghost" data-close>Annuler</button>
+    <button type="submit" id="submit-btn" class="btn btn-primary">Envoyer</button>
+  </div>
+</form>
   </div>
 </div>
 
@@ -1006,6 +1017,76 @@ document.addEventListener('keydown', (e)=>{
 });
 
 /* Small performance: lazy init images could be added; here images already use loading="lazy" */
+
+(function(){
+  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxQKCRTO279oYiK8MhXrurhN2QZMVhjNK0Zq-OFgDQR2HPtqyncImULVy7Io_0yTsKEjw/exec"; // <-- remplace par ton URL
+  const form = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const feedback = document.getElementById('form-feedback');
+
+  // Annuler : remet le formulaire à vide
+  document.querySelector('[data-close]').addEventListener('click', () => {
+    form.reset();
+    feedback.textContent = "";
+  });
+
+  async function sendJSON(payload){
+    // envoi via fetch (JSON). Si CORS bloque, voir fallback plus bas.
+    const res = await fetch(WEB_APP_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      mode: 'cors',
+      body: JSON.stringify(payload)
+    });
+    return res.json();
+  }
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    // validation simple
+    if (!form.checkValidity()){
+      feedback.textContent = "Merci de remplir correctement le formulaire.";
+      return;
+    }
+
+    const payload = {
+      agency: document.getElementById('contact-agency').value || "",
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      message: document.getElementById('message').value.trim(),
+      submittedAt: new Date().toISOString()
+    };
+
+    // UI during send
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Envoi...";
+    feedback.style.color = "#333";
+    feedback.textContent = "Envoi en cours…";
+
+    try {
+      const result = await sendJSON(payload);
+      if (result && result.success) {
+        feedback.style.color = "green";
+        feedback.textContent = "Merci ! Votre message a été envoyé.";
+        form.reset();
+      } else {
+        throw new Error(result && result.error ? result.error : "Erreur inconnue");
+      }
+    } catch (err) {
+      // probable CORS or déploiement non autorisé : on propose la solution iframe fallback
+      feedback.style.color = "crimson";
+      feedback.innerHTML = "Échec de l'envoi (CORS ou déploiement). <br>\
+        Utilise le mode fallback : envoie via POST direct. Voir instructions dans l'admin.";
+      console.error("Send error:", err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Envoyer";
+    }
+  });
+})();
 
 /* End of script */
 </script>
