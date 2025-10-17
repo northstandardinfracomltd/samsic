@@ -960,14 +960,6 @@ document.querySelectorAll('[data-job-index]').forEach(btn=>{
   });
 });
 
-/* Contact form submission (placeholder) */
-document.getElementById('contact-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  // ici : tu peux ajouter un fetch / integration Google Sheet / Zapier
-  alert('Merci ! Votre message a été pris en compte. (Formulaire de contact simulé)');
-  closeModal(contactModal);
-  this.reset();
-});
 
 /* Job modal close buttons event delegation (already handled) */
 
