@@ -1009,7 +1009,6 @@ document.addEventListener('keydown', (e)=>{
 
 
 
-
 (function(){
   const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxQKCRTO279oYiK8MhXrurhN2QZMVhjNK0Zq-OFgDQR2HPtqyncImULVy7Io_0yTsKEjw/exec"; // <-- remplace par ton URL
   const form = document.getElementById('contact-form');
@@ -1017,26 +1016,40 @@ document.addEventListener('keydown', (e)=>{
   const feedback = document.getElementById('form-feedback');
   const hiddenIframe = document.getElementById('hidden_iframe');
 
+  let fallbackTimeoutId = null;
+  const FALLBACK_TIMEOUT_MS = 10000; // 10s
+
   // Cancel
   document.querySelector('[data-close]').addEventListener('click', () => {
     form.reset();
     feedback.textContent = "";
   });
 
-  // Ecoute du postMessage venant de l'iframe
+  // Ecoute du postMessage venant de l'iframe (confirmation)
   window.addEventListener('message', function(ev) {
-    // Pour la sécurité, tu peux vérifier ev.origin si tu veux (ex: 'https://script.google.com')
+    // Optionnel : vérifier la provenance pour plus de sécurité
+    // if (ev.origin !== 'https://script.google.com') return;
+
     try {
       const data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
       if (data && data.source === 'google-apps-script-form') {
+        // On a une réponse du serveur (succès ou erreur)
+        if (fallbackTimeoutId) {
+          clearTimeout(fallbackTimeoutId);
+          fallbackTimeoutId = null;
+        }
+
         if (data.success) {
           feedback.style.color = 'green';
-          feedback.textContent = 'Merci ! Votre message a été envoyé.';
+          feedback.textContent = 'Message envoyé avec succès.';
           form.reset();
         } else {
           feedback.style.color = 'crimson';
           feedback.textContent = 'Erreur lors de l\'envoi : ' + (data.error || 'Erreur inconnue');
         }
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer';
       }
     } catch (e) {
       console.warn('Message non JSON reçu', ev.data);
@@ -1063,7 +1076,6 @@ document.addEventListener('keydown', (e)=>{
     f.action = WEB_APP_URL;
     f.target = 'hidden_iframe';
 
-    // ajoute champs (texte) — attention aux valeurs nulles
     for (const key of Object.keys(payload)) {
       const input = document.createElement('input');
       input.type = 'hidden';
@@ -1074,13 +1086,27 @@ document.addEventListener('keydown', (e)=>{
 
     document.body.appendChild(f);
     f.submit();
-    // on peut supprimer le form après un petit délai
-    setTimeout(()=> { document.body.removeChild(f); }, 1000);
+
+    // remove form after submit
+    setTimeout(()=> { try { document.body.removeChild(f); } catch(e){} }, 1000);
+
+    // start timeout: if no postMessage in X ms, show error and re-enable button
+    if (fallbackTimeoutId) {
+      clearTimeout(fallbackTimeoutId);
+    }
+    fallbackTimeoutId = setTimeout(() => {
+      fallbackTimeoutId = null;
+      feedback.style.color = 'crimson';
+      feedback.textContent = 'Délai dépassé — aucun accusé de réception reçu. Veuillez réessayer.';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Envoyer';
+    }, FALLBACK_TIMEOUT_MS);
   }
 
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     if (!form.checkValidity()) {
+      feedback.style.color = 'crimson';
       feedback.textContent = "Merci de remplir correctement le formulaire.";
       return;
     }
@@ -1088,7 +1114,7 @@ document.addEventListener('keydown', (e)=>{
     const payload = {
       source: 'site-form',
       agency: document.getElementById('contact-agency').value || "",
-      website: document.getElementById('hp-website').value || "", // honeypot
+      website: document.getElementById('hp-website') ? document.getElementById('hp-website').value || "" : "", // honeypot
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
       phone: document.getElementById('phone').value.trim(),
@@ -1096,7 +1122,7 @@ document.addEventListener('keydown', (e)=>{
       submittedAt: new Date().toISOString()
     };
 
-    // UI
+    // UI: bloquer le bouton pendant tout l'opération
     submitBtn.disabled = true;
     submitBtn.textContent = "Envoi...";
     feedback.style.color = "#333";
@@ -1105,25 +1131,27 @@ document.addEventListener('keydown', (e)=>{
     try {
       const result = await sendJSON(payload);
       if (result && result.success) {
+        // fetch a réussi (rare côté Apps Script si CORS ok)
         feedback.style.color = 'green';
-        feedback.textContent = 'Merci ! Votre message a été envoyé.';
+        feedback.textContent = 'Message envoyé avec succès.';
         form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer';
       } else {
-        // fetch a répondu sans success (ou body incorrect) -> fallback
+        // fetch a répondu sans succès ou body inattendu -> fallback iframe
         console.warn('fetch returned no success, fallback to iframe', result);
-        submitToIframe(payload);
         feedback.style.color = '#333';
         feedback.textContent = 'Envoi via fallback en cours…';
+        submitToIframe(payload);
+        // NE PAS réactiver le bouton ici : on attend le postMessage ou le timeout
       }
     } catch (err) {
-      // Erreur réseau / CORS : on bascule automatiquement sur fallback iframe
+      // Erreur (probable CORS) -> fallback
       console.warn('Send error, using iframe fallback:', err);
-      submitToIframe(payload);
       feedback.style.color = '#333';
       feedback.textContent = 'Envoi via fallback en cours…';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Envoyer';
+      submitToIframe(payload);
+      // NE PAS réactiver le bouton ici : on attend le postMessage ou le timeout
     }
   });
 })();
